@@ -1,0 +1,30 @@
+{
+  "mitochondrion": {
+    "name": "Mitochondrion",
+    "description": "Double membranes, matrix, cristae and ATP synthase. Transparent envelopes expose the interior.",
+    "parts": 11,
+    "blend": "mitochondrion.blend",
+    "glb": "mitochondrion.glb"
+  },
+  "chloroplast": {
+    "name": "Chloroplast",
+    "description": "Envelope, stroma, grana and lamellae. Light reactions occur in thylakoid membranes; the Calvin cycle occurs in the stroma.",
+    "parts": 9,
+    "blend": "chloroplast.blend",
+    "glb": "chloroplast.glb"
+  },
+  "respiratory-etc": {
+    "name": "Respiratory electron transport chain",
+    "description": "High-proton side is the intermembrane space; ATP synthase head faces the matrix. Complex II does not pump protons.",
+    "parts": 13,
+    "blend": "respiratory-etc.blend",
+    "glb": "respiratory-etc.glb"
+  },
+  "light-reactions": {
+    "name": "Thylakoid light reactions",
+    "description": "High-proton side is the thylakoid lumen; ATP synthase head and NADPH production face the stroma.",
+    "parts": 13,
+    "blend": "light-reactions.blend",
+    "glb": "light-reactions.glb"
+  }
+}

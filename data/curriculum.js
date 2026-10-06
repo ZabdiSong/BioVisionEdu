@@ -1,0 +1,1801 @@
+window.BIOVISION_DATA={
+  "title": "Cellular Energetics",
+  "unit": "Unit 2 · The Cell",
+  "lessons": [
+    {
+      "id": "energy",
+      "title": "Energy, ATP & redox",
+      "chapter": 9,
+      "minutes": 7,
+      "model": "mitochondrion",
+      "summary": "Cells transfer energy through coupled reactions, and electron carriers connect fuel breakdown with ATP production.",
+      "fiveW": {
+        "What": "Cells transfer energy through coupled reactions, and electron carriers connect fuel breakdown with ATP production.",
+        "Where": "ATP coupling occurs throughout the cell; respiratory pathways span cytosol and mitochondria.",
+        "Why": "Many cellular tasks are energetically unfavorable on their own. Coupling them to favorable reactions makes a combined process possible.",
+        "Who": "ATP and ADP; redox enzymes; NAD+/NADH and FAD/FADH2.",
+        "How": "Fuel oxidation transfers electrons to carriers. Energy is released in controlled steps and some is captured in ATP."
+      },
+      "points": [
+        "ATP hydrolysis can be coupled to transport, movement or synthesis; ATP is a transferable energy currency rather than long-term fuel storage.",
+        "Oxidation means losing electrons; reduction means gaining electrons. These processes occur together in a redox reaction.",
+        "NAD+ accepts electrons and becomes NADH. NADH later donates electrons and is oxidized back to NAD+.",
+        "Enzymes lower activation barriers. They do not change the overall free-energy difference or create energy."
+      ],
+      "steps": [
+        {
+          "title": "Oxidize fuel",
+          "text": "Electrons are transferred from fuel molecules to electron carriers.",
+          "why": "Energy is captured gradually rather than released in one uncontrolled reaction."
+        },
+        {
+          "title": "Capture usable energy",
+          "text": "ATP and reduced carriers store part of the transferred chemical energy.",
+          "why": "Carriers connect reactions occurring at different times and locations."
+        },
+        {
+          "title": "Couple cellular work",
+          "text": "ATP hydrolysis is coupled to an otherwise unfavorable cellular process.",
+          "why": "Coupling links the energy-releasing and energy-requiring reactions."
+        }
+      ],
+      "misconception": {
+        "myth": "Breaking an ATP bond alone releases energy.",
+        "truth": "Breaking a bond requires energy. ATP hydrolysis is favorable because the complete reaction produces more stable products."
+      },
+      "ledger": [
+        [
+          "ATP cycle",
+          "ATP → ADP + Pi",
+          "Work is coupled to the full reaction"
+        ],
+        [
+          "Carrier cycle",
+          "NAD+ ↔ NADH",
+          "Electron transfer connects pathways"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "glycolysis",
+      "title": "Glycolysis: one glucose, two pyruvates",
+      "chapter": 9,
+      "minutes": 8,
+      "model": "mitochondrion",
+      "summary": "Glycolysis splits one six-carbon glucose into two three-carbon pyruvates and captures ATP and NADH.",
+      "fiveW": {
+        "What": "Glycolysis splits one six-carbon glucose into two three-carbon pyruvates and captures ATP and NADH.",
+        "Where": "The cytosol, outside the mitochondrial matrix.",
+        "Why": "It provides an initial way to extract energy from glucose, including when oxygen is unavailable.",
+        "Who": "Glucose, ATP, ADP, NAD+, enzymes and two three-carbon intermediates.",
+        "How": "An investment phase uses two ATP. A payoff phase produces four ATP and two NADH per glucose."
+      },
+      "points": [
+        "Net yield per glucose: two pyruvates, two ATP and two NADH.",
+        "ATP is formed by substrate-level phosphorylation: a phosphate is transferred from an intermediate to ADP.",
+        "Glycolysis does not directly require O2, but it requires a supply of NAD+.",
+        "Carbon remains in the two pyruvates; glycolysis does not release CO2."
+      ],
+      "steps": [
+        {
+          "title": "Invest energy",
+          "text": "Two ATP are consumed as glucose is phosphorylated and prepared for splitting.",
+          "why": "Phosphorylation helps keep glucose in the cell and prepares it for later reactions."
+        },
+        {
+          "title": "Split and oxidize",
+          "text": "The six-carbon pathway becomes two three-carbon pathways; NAD+ is reduced.",
+          "why": "Two parallel payoff sequences account for the doubled product numbers."
+        },
+        {
+          "title": "Collect the payoff",
+          "text": "Four ATP are formed and two pyruvates remain. Net ATP equals four produced minus two invested.",
+          "why": "Net yield accounts for the earlier investment."
+        }
+      ],
+      "misconception": {
+        "myth": "Glycolysis makes four net ATP.",
+        "truth": "It produces four ATP but consumes two, so the net yield is two ATP per glucose."
+      },
+      "ledger": [
+        [
+          "Carbon",
+          "1 glucose (6 C) → 2 pyruvates (3 C each)",
+          "No CO2 released"
+        ],
+        [
+          "ATP",
+          "2 consumed; 4 produced",
+          "Net 2 ATP"
+        ],
+        [
+          "Carriers",
+          "2 NAD+ → 2 NADH",
+          "Per glucose"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "pyruvate",
+      "title": "Pyruvate oxidation: the bridge",
+      "chapter": 9,
+      "minutes": 6,
+      "model": "mitochondrion",
+      "summary": "Pyruvate oxidation links glycolysis to the citric acid cycle by producing acetyl-CoA.",
+      "fiveW": {
+        "What": "Pyruvate oxidation links glycolysis to the citric acid cycle by producing acetyl-CoA.",
+        "Where": "In the mitochondrial matrix of eukaryotic cells.",
+        "Why": "The acetyl group can enter the cycle, while electrons are captured in NADH.",
+        "Who": "Pyruvate dehydrogenase complex, pyruvate, NAD+ and coenzyme A.",
+        "How": "Each three-carbon pyruvate loses one carbon as CO2. Its remaining two-carbon acetyl group attaches to CoA."
+      },
+      "points": [
+        "Per glucose, two pyruvates produce two acetyl-CoA, two CO2 and two NADH.",
+        "This bridge reaction does not directly make ATP.",
+        "Coenzyme A carries the acetyl group; its attachment helps make subsequent transfer energetically useful.",
+        "The two acetyl carbons enter the citric acid cycle; pyruvate itself does not enter the cycle as the starting input."
+      ],
+      "steps": [
+        {
+          "title": "Release one carbon",
+          "text": "One carbon from each pyruvate leaves as CO2.",
+          "why": "This connects three-carbon pyruvate with the two-carbon acetyl group."
+        },
+        {
+          "title": "Capture electrons",
+          "text": "NAD+ is reduced to NADH.",
+          "why": "Oxidation energy is transferred to an electron carrier."
+        },
+        {
+          "title": "Attach coenzyme A",
+          "text": "The acetyl group is linked to coenzyme A.",
+          "why": "Acetyl-CoA transfers its acetyl group into the next pathway."
+        }
+      ],
+      "misconception": {
+        "myth": "Pyruvate oxidation directly makes ATP.",
+        "truth": "It makes NADH and acetyl-CoA but no ATP directly."
+      },
+      "ledger": [
+        [
+          "Per pyruvate",
+          "1 acetyl-CoA; 1 CO2; 1 NADH",
+          "No direct ATP"
+        ],
+        [
+          "Per glucose",
+          "2 acetyl-CoA; 2 CO2; 2 NADH",
+          "Two bridge reactions"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "citric",
+      "title": "The citric acid cycle",
+      "chapter": 9,
+      "minutes": 8,
+      "model": "mitochondrion",
+      "summary": "The cycle oxidizes acetyl groups and regenerates oxaloacetate while loading NADH and FADH2.",
+      "fiveW": {
+        "What": "The cycle oxidizes acetyl groups and regenerates oxaloacetate while loading NADH and FADH2.",
+        "Where": "Most reactions occur in the mitochondrial matrix; succinate dehydrogenase is associated with the inner membrane.",
+        "Why": "Much of the captured energy is carried onward as reduced electron carriers, rather than direct ATP.",
+        "Who": "Acetyl-CoA, oxaloacetate, cycle enzymes, NAD+, FAD and ADP/GDP.",
+        "How": "Two acetyl carbons join four-carbon oxaloacetate. A series of reactions releases CO2 and restores the four-carbon acceptor."
+      },
+      "points": [
+        "One turn per acetyl-CoA yields three NADH, one FADH2, one ATP or GTP, and two CO2.",
+        "Two turns per glucose yield six NADH, two FADH2, two ATP/GTP and four CO2.",
+        "Oxaloacetate is regenerated; it is not consumed once for every turn.",
+        "The cycle does not directly consume O2, but carrier recycling normally depends on oxygen-linked respiration."
+      ],
+      "steps": [
+        {
+          "title": "Join the cycle",
+          "text": "A two-carbon acetyl group combines with four-carbon oxaloacetate.",
+          "why": "The six-carbon product begins a cycle that can be repeated."
+        },
+        {
+          "title": "Oxidize and capture",
+          "text": "Reactions release CO2 and reduce NAD+ and FAD; substrate-level phosphorylation forms ATP or GTP.",
+          "why": "Reduced carriers capture most of the pathway’s usable energy."
+        },
+        {
+          "title": "Regenerate the acceptor",
+          "text": "Four-carbon oxaloacetate is restored.",
+          "why": "Regeneration allows another acetyl group to enter."
+        }
+      ],
+      "misconception": {
+        "myth": "One glucose produces only one turn of the cycle.",
+        "truth": "One glucose normally supplies two acetyl-CoA, so the cycle turns twice."
+      },
+      "ledger": [
+        [
+          "One turn",
+          "3 NADH; 1 FADH2; 1 ATP/GTP; 2 CO2",
+          "Per acetyl-CoA"
+        ],
+        [
+          "Two turns",
+          "6 NADH; 2 FADH2; 2 ATP/GTP; 4 CO2",
+          "Per glucose"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "etc",
+      "title": "Electron transport: donor to oxygen",
+      "chapter": 9,
+      "minutes": 10,
+      "model": "respiratory-etc",
+      "summary": "The respiratory electron transport chain transfers electrons to oxygen and uses released energy to build a proton gradient.",
+      "fiveW": {
+        "What": "The respiratory electron transport chain transfers electrons to oxygen and uses released energy to build a proton gradient.",
+        "Where": "The mitochondrial inner membrane; protons are moved from the matrix into the intermembrane space.",
+        "Why": "Controlled electron transfer stores energy as an electrochemical gradient that ATP synthase can use.",
+        "Who": "NADH, FAD-linked electrons, complexes I–IV, ubiquinone, cytochrome c and O2.",
+        "How": "NADH donates to complex I. Electrons from succinate enter via complex II and Q. Q → III → cytochrome c → IV transfers electrons to O2."
+      },
+      "points": [
+        "Complexes I, III and IV contribute to proton pumping; complex II does not pump protons.",
+        "Ubiquinone (Q) moves within the membrane; cytochrome c moves on the intermembrane-space side.",
+        "Oxygen accepts electrons at the end of the chain and is reduced to water.",
+        "Electron transport establishes the gradient; ATP synthase is a separate complex that uses the gradient.",
+        "The uploaded clips are brief visual demonstrations. They are accompanied here by complete explanatory text."
+      ],
+      "steps": [
+        {
+          "title": "Donate electrons",
+          "text": "NADH is oxidized at complex I. FAD-linked electrons can enter through complex II toward Q.",
+          "why": "Entry points matter: bypassing complex I reduces the proton translocation associated with those electrons."
+        },
+        {
+          "title": "Transfer and pump",
+          "text": "Q and cytochrome c connect large complexes. Transfer energy supports proton movement into the intermembrane space.",
+          "why": "This separates proton concentration and charge across an intact membrane."
+        },
+        {
+          "title": "Reduce oxygen",
+          "text": "Complex IV transfers electrons to O2, forming water.",
+          "why": "A terminal acceptor permits continuing electron flow and carrier regeneration."
+        },
+        {
+          "title": "Connect to ATP synthesis",
+          "text": "Protons can return to the matrix through ATP synthase.",
+          "why": "The gradient, rather than a direct electron-to-ATP transfer, powers ATP synthesis."
+        }
+      ],
+      "misconception": {
+        "myth": "Complex II pumps protons just like complex I.",
+        "truth": "Complex II passes electrons toward Q but does not pump protons across the inner membrane."
+      },
+      "ledger": [
+        [
+          "Electron donors",
+          "NADH; FAD-linked electrons",
+          "Different chain entry points"
+        ],
+        [
+          "Terminal acceptor",
+          "O2 → H2O",
+          "At complex IV"
+        ],
+        [
+          "Proton movement",
+          "Matrix → intermembrane space",
+          "By the chain; return through ATP synthase"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "chemiosmosis",
+      "title": "Chemiosmosis & ATP synthase",
+      "chapter": 9,
+      "minutes": 8,
+      "model": "respiratory-etc",
+      "summary": "Proton flow through ATP synthase couples an electrochemical gradient to ATP production.",
+      "fiveW": {
+        "What": "Proton flow through ATP synthase couples an electrochemical gradient to ATP production.",
+        "Where": "Across the mitochondrial inner membrane; the catalytic ATP synthase head faces the matrix.",
+        "Why": "A membrane gradient lets many electron-transfer steps power a shared ATP-producing mechanism.",
+        "Who": "ATP synthase, H+, ADP and inorganic phosphate (Pi).",
+        "How": "The respiratory chain establishes the gradient. H+ returns down its electrochemical gradient through ATP synthase; conformational changes drive ATP formation."
+      },
+      "points": [
+        "The proton-motive force includes both a concentration difference and an electrical potential difference.",
+        "A sufficiently intact membrane is essential; a proton leak dissipates the gradient.",
+        "Oxidative phosphorylation combines electron transport with chemiosmosis. It differs from substrate-level phosphorylation.",
+        "Aerobic glucose oxidation in eukaryotic cells often yields about 30–32 ATP; yield is not a single fixed number across all conditions."
+      ],
+      "steps": [
+        {
+          "title": "Build the gradient",
+          "text": "Electron transport moves H+ against its electrochemical gradient.",
+          "why": "Input energy is required to maintain a difference across the membrane."
+        },
+        {
+          "title": "Let protons return",
+          "text": "H+ moves through ATP synthase toward the matrix.",
+          "why": "Controlled return captures energy that would otherwise dissipate."
+        },
+        {
+          "title": "Make ATP",
+          "text": "ADP and Pi form ATP through the enzyme’s coupled conformational changes.",
+          "why": "The catalytic head converts the stored gradient energy into transferable chemical energy."
+        }
+      ],
+      "misconception": {
+        "myth": "Electrons flow through ATP synthase to make ATP.",
+        "truth": "Protons flow through ATP synthase. Electrons pass through the electron transport chain."
+      },
+      "ledger": [
+        [
+          "Chain",
+          "Electron transfer → proton gradient",
+          "Energy transfer"
+        ],
+        [
+          "ATP synthase",
+          "ADP + Pi → ATP",
+          "Coupled to proton return"
+        ],
+        [
+          "Uncoupling",
+          "Proton leak reduces ATP coupling",
+          "O2 consumption and ATP output can diverge"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "fermentation",
+      "title": "Fermentation & NAD+ recycling",
+      "chapter": 9,
+      "minutes": 7,
+      "model": "mitochondrion",
+      "summary": "Fermentation regenerates NAD+ so glycolysis can continue when respiratory NADH oxidation is unavailable.",
+      "fiveW": {
+        "What": "Fermentation regenerates NAD+ so glycolysis can continue when respiratory NADH oxidation is unavailable.",
+        "Where": "The cytosol.",
+        "Why": "A finite NAD+ supply must be restored for continued glycolytic oxidation.",
+        "Who": "NADH, pyruvate or a pyruvate-derived product, and fermentation enzymes.",
+        "How": "In lactate fermentation, pyruvate accepts electrons from NADH. In alcohol fermentation, pyruvate loses CO2 and acetaldehyde accepts electrons."
+      },
+      "points": [
+        "Fermentation’s essential role is NAD+ regeneration; it makes no additional ATP beyond glycolysis in these pathways.",
+        "The net ATP yield associated with glycolysis plus lactate/alcohol fermentation is two ATP per glucose.",
+        "Lactate fermentation does not release CO2 in its pyruvate-to-lactate step; alcohol fermentation does.",
+        "Anaerobic respiration uses an electron transport chain with a terminal acceptor other than O2; it is different from fermentation."
+      ],
+      "steps": [
+        {
+          "title": "Produce pyruvate and NADH",
+          "text": "Glycolysis supplies both while making net two ATP.",
+          "why": "Glycolysis depends on recycled NAD+."
+        },
+        {
+          "title": "Transfer electrons to an organic acceptor",
+          "text": "NADH reduces pyruvate or acetaldehyde.",
+          "why": "Reduction oxidizes NADH back to NAD+."
+        },
+        {
+          "title": "Recycle NAD+",
+          "text": "NAD+ returns to glycolysis.",
+          "why": "Regeneration sustains glycolytic ATP production without the aerobic respiratory chain."
+        }
+      ],
+      "misconception": {
+        "myth": "Fermentation adds a large ATP payoff after glycolysis.",
+        "truth": "The fermentation steps recycle NAD+; the two net ATP come from glycolysis."
+      },
+      "ledger": [
+        [
+          "Lactate route",
+          "Pyruvate + NADH → lactate + NAD+",
+          "No CO2 in this conversion"
+        ],
+        [
+          "Alcohol route",
+          "Pyruvate → acetaldehyde + CO2; then ethanol",
+          "NAD+ regenerated"
+        ],
+        [
+          "Net ATP",
+          "2 per glucose",
+          "Produced by glycolysis"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "fuels",
+      "title": "Other fuels & pathway regulation",
+      "chapter": 9,
+      "minutes": 6,
+      "model": "mitochondrion",
+      "summary": "Respiratory pathways accept several fuel types and respond to the cell’s energy needs.",
+      "fiveW": {
+        "What": "Respiratory pathways accept several fuel types and respond to the cell’s energy needs.",
+        "Where": "Entry points span glycolysis, acetyl-CoA formation and the citric acid cycle.",
+        "Why": "Cells must coordinate energy extraction with fuel availability and biosynthesis.",
+        "Who": "Carbohydrates, fatty acids, amino acids and regulatory enzymes.",
+        "How": "Glycerol can enter glycolysis; fatty acids undergo beta-oxidation to acetyl-CoA; deaminated amino-acid carbon skeletons enter at various points."
+      },
+      "points": [
+        "Proteins generally require removal of amino groups before their carbon skeletons enter energy pathways.",
+        "Fats can supply substantial chemical energy because many of their carbons are highly reduced.",
+        "High ATP availability can inhibit key catabolic control steps; AMP/ADP can signal greater ATP demand.",
+        "Pathway intermediates also support biosynthesis, so respiration is connected to many other cellular processes."
+      ],
+      "steps": [
+        {
+          "title": "Prepare the fuel",
+          "text": "Break larger nutrients into molecules that can enter shared pathways.",
+          "why": "Different nutrients require different initial processing."
+        },
+        {
+          "title": "Join a shared pathway",
+          "text": "Carbon skeletons enter glycolysis, acetyl-CoA production or the cycle.",
+          "why": "Shared downstream steps allow flexible fuel use."
+        },
+        {
+          "title": "Adjust the rate",
+          "text": "Regulatory signals alter enzyme activity as energy demand changes.",
+          "why": "Feedback helps avoid unnecessary breakdown when ATP is abundant."
+        }
+      ],
+      "misconception": {
+        "myth": "Every respiratory fuel must first become glucose.",
+        "truth": "Several fuels enter downstream of glucose, including fatty-acid-derived acetyl-CoA."
+      },
+      "ledger": [
+        [
+          "Fatty acids",
+          "Beta-oxidation → acetyl-CoA",
+          "Not necessarily glucose first"
+        ],
+        [
+          "Amino acids",
+          "Deamination then pathway entry",
+          "Entry depends on the carbon skeleton"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "chloroplast",
+      "title": "Chloroplast compartments",
+      "chapter": 10,
+      "minutes": 7,
+      "model": "chloroplast",
+      "summary": "Chloroplasts separate light reactions in thylakoid membranes from carbon fixation in the stroma.",
+      "fiveW": {
+        "What": "Chloroplasts separate light reactions in thylakoid membranes from carbon fixation in the stroma.",
+        "Where": "Photosynthetic cells, especially leaf mesophyll cells in plants.",
+        "Why": "Compartments organize reactions and allow a thylakoid proton gradient to form.",
+        "Who": "Envelope membranes, stroma, thylakoid membranes, lumen, grana and lamellae.",
+        "How": "Light-reaction proteins occupy thylakoid membranes. ATP and NADPH produced on the stromal side support the Calvin cycle in the stroma."
+      },
+      "points": [
+        "The envelope surrounds the organelle; it is different from the internal thylakoid membrane.",
+        "A granum is a stack of thylakoids. The lumen is the space inside a thylakoid.",
+        "The stroma is outside the thylakoid lumen and inside the inner envelope.",
+        "Plants also carry out cellular respiration. Photosynthesis does not eliminate their need for mitochondria."
+      ],
+      "steps": [
+        {
+          "title": "Locate the envelope",
+          "text": "Find the double boundary around the chloroplast.",
+          "why": "It defines the organelle’s compartment."
+        },
+        {
+          "title": "Locate grana and lumen",
+          "text": "Inspect the stacks of thylakoid discs and their internal spaces.",
+          "why": "Membrane and lumen are distinct structures with different roles."
+        },
+        {
+          "title": "Locate the stroma",
+          "text": "Identify the fluid region surrounding the thylakoids.",
+          "why": "This is where the Calvin cycle uses ATP and NADPH."
+        }
+      ],
+      "misconception": {
+        "myth": "The Calvin cycle takes place inside the thylakoid lumen.",
+        "truth": "It takes place in the stroma; the lumen participates in the proton gradient."
+      },
+      "ledger": [
+        [
+          "Thylakoid membrane",
+          "Light reactions",
+          "Contains photosystems and carriers"
+        ],
+        [
+          "Lumen",
+          "H+ accumulation",
+          "Inside thylakoids"
+        ],
+        [
+          "Stroma",
+          "Calvin cycle",
+          "Outside thylakoid lumen"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "pigments",
+      "title": "Light, pigments & photosystems",
+      "chapter": 10,
+      "minutes": 7,
+      "model": "light-reactions",
+      "summary": "Pigments absorb selected wavelengths, and photosystems organize light capture and electron transfer.",
+      "fiveW": {
+        "What": "Pigments absorb selected wavelengths, and photosystems organize light capture and electron transfer.",
+        "Where": "Pigments are associated with photosystem proteins in thylakoid membranes.",
+        "Why": "Light energy must be captured and converted into useful chemical processes.",
+        "Who": "Chlorophyll a, chlorophyll b, accessory pigments, antenna complexes and reaction-center chlorophyll.",
+        "How": "Antenna pigments transfer excitation energy toward a reaction center, where an excited electron is transferred to an acceptor."
+      },
+      "points": [
+        "Absorption spectra measure which wavelengths a pigment absorbs; action spectra measure the biological response to wavelengths.",
+        "Accessory pigments broaden light capture and can help protect against excess light.",
+        "Energy transfer between antenna pigments is not the same as the reaction center’s electron transfer.",
+        "Photosystem II operates before photosystem I in linear electron flow; numbering reflects discovery, not pathway order."
+      ],
+      "steps": [
+        {
+          "title": "Absorb a photon",
+          "text": "A pigment absorbs light of a suitable wavelength.",
+          "why": "Only absorbed energy can contribute to excitation."
+        },
+        {
+          "title": "Transfer excitation",
+          "text": "Antenna complexes funnel excitation toward the reaction center.",
+          "why": "Many pigments can support a common reaction-center event."
+        },
+        {
+          "title": "Transfer an electron",
+          "text": "Reaction-center chlorophyll transfers an excited electron to an acceptor.",
+          "why": "Electron transfer converts a brief excited state into a useful chemical event."
+        }
+      ],
+      "misconception": {
+        "myth": "Photosystem I always comes first because it is numbered I.",
+        "truth": "Linear electron flow begins at photosystem II and then reaches photosystem I."
+      },
+      "ledger": [
+        [
+          "Absorption spectrum",
+          "Pigment light absorption",
+          "Physical measurement"
+        ],
+        [
+          "Action spectrum",
+          "Photosynthetic response to wavelength",
+          "Biological measurement"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "light",
+      "title": "Light reactions: ATP, NADPH & oxygen",
+      "chapter": 10,
+      "minutes": 10,
+      "model": "light-reactions",
+      "summary": "Linear electron flow uses light and water to support ATP and NADPH production while releasing oxygen.",
+      "fiveW": {
+        "What": "Linear electron flow uses light and water to support ATP and NADPH production while releasing oxygen.",
+        "Where": "The thylakoid membrane; H+ accumulates in the lumen and returns toward the stroma through ATP synthase.",
+        "Why": "ATP provides energy and NADPH provides reducing power for carbon fixation.",
+        "Who": "PSII, water, plastoquinone, cytochrome b6f, plastocyanin, PSI, ferredoxin, NADP+ reductase and ATP synthase.",
+        "How": "Light excites electrons twice. Water replaces electrons lost from PSII. Electrons ultimately reduce NADP+; proton accumulation drives photophosphorylation."
+      },
+      "points": [
+        "Released O2 comes from water oxidation, not from CO2.",
+        "PSII → carrier chain → PSI → ferredoxin → NADP+ reduction describes linear electron flow.",
+        "ATP synthase releases ATP on the stromal side; NADPH is also available to stromal reactions.",
+        "Cyclic electron flow around PSI can help generate extra ATP without producing NADPH or O2 through that cyclic route."
+      ],
+      "steps": [
+        {
+          "title": "Replace PSII electrons",
+          "text": "Water oxidation supplies electrons, releases O2 and adds protons to the lumen.",
+          "why": "Electron donation permits continuing PSII activity."
+        },
+        {
+          "title": "Transfer electrons and build a gradient",
+          "text": "Carriers connect PSII with PSI while proton accumulation increases.",
+          "why": "The gradient supports ATP production across the thylakoid membrane."
+        },
+        {
+          "title": "Re-excite and reduce NADP+",
+          "text": "Light at PSI raises electron energy again; electrons ultimately reduce NADP+.",
+          "why": "NADPH supplies reducing power needed for carbon fixation."
+        },
+        {
+          "title": "Make ATP",
+          "text": "H+ returns toward the stroma through ATP synthase.",
+          "why": "Photophosphorylation captures gradient energy as ATP."
+        }
+      ],
+      "misconception": {
+        "myth": "The oxygen released by photosynthesis comes from CO2.",
+        "truth": "Released molecular oxygen comes from water oxidized at photosystem II."
+      },
+      "ledger": [
+        [
+          "Inputs",
+          "Light; H2O; NADP+; ADP + Pi",
+          "Linear flow"
+        ],
+        [
+          "Outputs",
+          "O2; NADPH; ATP",
+          "For exchange and stromal metabolism"
+        ],
+        [
+          "H+ route",
+          "Lumen → stroma through ATP synthase",
+          "Return direction"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "calvin",
+      "title": "The Calvin cycle: fixation to G3P",
+      "chapter": 10,
+      "minutes": 9,
+      "model": "chloroplast",
+      "summary": "The Calvin cycle incorporates CO2 into organic molecules using ATP and NADPH.",
+      "fiveW": {
+        "What": "The Calvin cycle incorporates CO2 into organic molecules using ATP and NADPH.",
+        "Where": "The chloroplast stroma.",
+        "Why": "Carbon fixation builds organic carbon that can support sugars and other biosynthesis.",
+        "Who": "Rubisco, RuBP, 3-PGA, G3P, ATP and NADPH.",
+        "How": "CO2 is fixed to RuBP, intermediates are reduced to G3P, and most G3P-derived carbon regenerates RuBP."
+      },
+      "points": [
+        "Three CO2 entering the cycle support one net G3P output and consume nine ATP and six NADPH.",
+        "The other five of the six generated G3P molecules are used to regenerate three RuBP molecules.",
+        "One G3P has three carbons; glucose has six. Glucose is not the cycle’s immediate net product.",
+        "Light-independent means photons are not direct reactants; it does not mean the cycle normally operates only at night."
+      ],
+      "steps": [
+        {
+          "title": "Fix carbon",
+          "text": "Rubisco catalyzes addition of CO2 to RuBP, producing 3-PGA after the unstable intermediate splits.",
+          "why": "Inorganic carbon becomes part of organic molecules."
+        },
+        {
+          "title": "Reduce intermediates",
+          "text": "ATP and NADPH support conversion of 3-PGA toward G3P.",
+          "why": "The carbon products receive energy and reducing power."
+        },
+        {
+          "title": "Regenerate RuBP",
+          "text": "Most G3P carbon is rearranged, with ATP input, to restore RuBP.",
+          "why": "Regeneration allows continued CO2 fixation."
+        }
+      ],
+      "misconception": {
+        "myth": "The Calvin cycle directly produces one glucose after each turn.",
+        "truth": "Its net exported product is G3P; three CO2 give one net G3P, and further reactions can build sugars."
+      },
+      "ledger": [
+        [
+          "For 3 CO2",
+          "9 ATP + 6 NADPH consumed",
+          "1 net G3P"
+        ],
+        [
+          "Carbon bookkeeping",
+          "6 G3P formed; 1 exits; 5 support regeneration",
+          "Three RuBP restored"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "photorespiration",
+      "title": "Photorespiration: competing substrates",
+      "chapter": 10,
+      "minutes": 7,
+      "model": "chloroplast",
+      "summary": "Rubisco can act with O2 instead of CO2, initiating photorespiration and reducing productive carbon fixation.",
+      "fiveW": {
+        "What": "Rubisco can act with O2 instead of CO2, initiating photorespiration and reducing productive carbon fixation.",
+        "Where": "The pathway spans chloroplasts, peroxisomes and mitochondria.",
+        "Why": "Rubisco’s competing activities help explain why hot, dry conditions can lower photosynthetic efficiency.",
+        "Who": "Rubisco, RuBP, CO2, O2 and enzymes that recover part of the resulting carbon.",
+        "How": "Stomatal closure conserves water but can lower internal CO2. Oxygenation of RuBP becomes more competitive, and recovery costs energy while releasing some CO2."
+      },
+      "points": [
+        "Photorespiration differs from mitochondrial respiration and does not provide a comparable ATP payoff.",
+        "Rubisco’s oxygenase activity competes with its carboxylase activity.",
+        "Hot, dry conditions can promote stomatal closure and alter the internal CO2/O2 balance.",
+        "C4 and CAM mechanisms help concentrate or conserve CO2 supply for productive fixation."
+      ],
+      "steps": [
+        {
+          "title": "Conserve water",
+          "text": "Stomata close under water stress.",
+          "why": "Closure reduces water loss but limits gas exchange."
+        },
+        {
+          "title": "Change substrate competition",
+          "text": "Lower CO2 relative to O2 increases the chance of RuBP oxygenation.",
+          "why": "Rubisco can interact with either substrate."
+        },
+        {
+          "title": "Recover carbon at a cost",
+          "text": "A multi-organelle pathway recovers some carbon while consuming energy and releasing CO2.",
+          "why": "Recovery is less productive than direct CO2 fixation."
+        }
+      ],
+      "misconception": {
+        "myth": "Photorespiration is simply another name for ATP-producing respiration.",
+        "truth": "It is a distinct carbon-recovery pathway associated with Rubisco oxygenation and an energy cost."
+      },
+      "ledger": [
+        [
+          "Carboxylase route",
+          "Rubisco + CO2",
+          "Supports Calvin-cycle fixation"
+        ],
+        [
+          "Oxygenase route",
+          "Rubisco + O2",
+          "Initiates photorespiration"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "c4cam",
+      "title": "C4 & CAM: space versus time",
+      "chapter": 10,
+      "minutes": 7,
+      "model": "chloroplast",
+      "summary": "C4 and CAM pathways help improve CO2 availability for the Calvin cycle in challenging environments.",
+      "fiveW": {
+        "What": "C4 and CAM pathways help improve CO2 availability for the Calvin cycle in challenging environments.",
+        "Where": "C4 separates initial fixation and the Calvin cycle across cell types; CAM separates them across times of day.",
+        "Why": "These mechanisms can reduce photorespiration or water loss, but they have energetic and ecological tradeoffs.",
+        "Who": "PEP carboxylase, four-carbon acids, Rubisco and specialized cells or storage patterns.",
+        "How": "C4 plants deliver concentrated CO2 to bundle-sheath cells. CAM plants capture CO2 at night into organic acids, then release it for daytime Calvin-cycle activity."
+      },
+      "points": [
+        "C4: initial fixation typically occurs in mesophyll cells; CO2 is supplied to the Calvin cycle in bundle-sheath cells.",
+        "CAM: stomata typically open at night; stored organic acids provide CO2 during daytime closure.",
+        "Both still use the Calvin cycle; they do not replace it with a completely separate sugar-making pathway.",
+        "The advantage depends on conditions; neither mechanism is universally best."
+      ],
+      "steps": [
+        {
+          "title": "Capture CO2 initially",
+          "text": "PEP carboxylase helps incorporate CO2 into four-carbon products.",
+          "why": "This supports efficient initial CO2 capture."
+        },
+        {
+          "title": "Separate in space or time",
+          "text": "C4 uses different cell types; CAM uses different times of day.",
+          "why": "Different forms of separation fit different constraints."
+        },
+        {
+          "title": "Supply the Calvin cycle",
+          "text": "CO2 is released near Rubisco for productive fixation.",
+          "why": "The Calvin cycle remains the downstream carbon-building pathway."
+        }
+      ],
+      "misconception": {
+        "myth": "C4 and CAM are two names for the same separation mechanism.",
+        "truth": "C4 primarily separates processes in space; CAM primarily separates them in time."
+      },
+      "ledger": [
+        [
+          "C4",
+          "Mesophyll ↔ bundle sheath",
+          "Spatial separation"
+        ],
+        [
+          "CAM",
+          "Night ↔ day",
+          "Temporal separation"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "comparison",
+      "title": "Compare the two energy systems",
+      "chapter": 10,
+      "minutes": 8,
+      "model": "light-reactions",
+      "summary": "Respiration and photosynthesis share electron transport and chemiosmosis, but their donors, acceptors and carbon roles differ.",
+      "fiveW": {
+        "What": "Respiration and photosynthesis share electron transport and chemiosmosis, but their donors, acceptors and carbon roles differ.",
+        "Where": "Respiratory inner membranes and photosynthetic thylakoid membranes.",
+        "Why": "Comparison helps distinguish a shared mechanism from pathway-specific chemistry.",
+        "Who": "Respiration: NADH/FAD-linked electrons and O2. Photosynthesis: water, light and NADP+ in linear flow.",
+        "How": "Both use electron transfer to support a proton gradient. ATP synthase uses proton return, but carbon oxidation and carbon fixation have different roles."
+      },
+      "points": [
+        "Respiration generally oxidizes organic carbon; photosynthesis fixes inorganic carbon using energy captured from light.",
+        "In respiration, O2 is consumed as the terminal electron acceptor. In oxygenic photosynthesis, O2 is released from water.",
+        "Mitochondrial H+ accumulates in the intermembrane space; chloroplast H+ accumulates in the thylakoid lumen.",
+        "Plants perform both pathways. Net gas exchange combines photosynthesis and respiration rather than proving only one occurs."
+      ],
+      "steps": [
+        {
+          "title": "Identify donor and acceptor",
+          "text": "Name the electron source and final acceptor for each pathway.",
+          "why": "Similar-looking membranes do not imply identical chemistry."
+        },
+        {
+          "title": "Locate the gradient",
+          "text": "Find the high-H+ compartment and the direction of return.",
+          "why": "Compartment names prevent directional confusion."
+        },
+        {
+          "title": "Connect energy and carbon",
+          "text": "Compare fuel oxidation with carbon fixation.",
+          "why": "The systems connect but are not simple reverse versions of every molecular step."
+        }
+      ],
+      "misconception": {
+        "myth": "Photosynthesis is cellular respiration run backward step by step.",
+        "truth": "Their overall carbon and gas relationships connect, but the pathways use different enzymes and mechanisms."
+      },
+      "ledger": [
+        [
+          "Respiration",
+          "NADH/FAD-linked donors → O2",
+          "ATP; high H+ in intermembrane space"
+        ],
+        [
+          "Linear photosynthesis",
+          "H2O donor → NADP+",
+          "ATP and NADPH; high H+ in lumen"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    },
+    {
+      "id": "experiments",
+      "title": "Read evidence, not just a diagram",
+      "chapter": 10,
+      "minutes": 8,
+      "model": "chloroplast",
+      "summary": "Experiments test explanations by comparing controlled conditions and identifying what measurements can support.",
+      "fiveW": {
+        "What": "Experiments test explanations by comparing controlled conditions and identifying what measurements can support.",
+        "Where": "A leaf-disc assay, isolated organelles or a respirometer can investigate aspects of energy metabolism.",
+        "Why": "A visual model proposes a mechanism; measured evidence is needed to evaluate it.",
+        "Who": "Independent variable, dependent measurement, controls, replicates and alternative explanations.",
+        "How": "Vary one defined condition, keep relevant conditions comparable, record repeated measurements, and interpret the measurement without claiming more than it demonstrates."
+      },
+      "points": [
+        "In a leaf-disc assay, flotation can reflect accumulated gas, but infiltration, density and other conditions affect results.",
+        "Dissolved-O2 changes reflect net production or consumption under the experimental conditions.",
+        "Controls help distinguish a treatment effect from background changes; biological replicates assess variation.",
+        "A model is a simplification. An unexpected result may reveal a missing variable rather than validate or invalidate every part of a pathway."
+      ],
+      "steps": [
+        {
+          "title": "Define a testable question",
+          "text": "Specify the treatment and measurement before collecting data.",
+          "why": "A precise prediction makes evidence interpretable."
+        },
+        {
+          "title": "Control and replicate",
+          "text": "Include an appropriate comparison and repeat independent samples.",
+          "why": "Controls and replication address different sources of uncertainty."
+        },
+        {
+          "title": "Interpret limits",
+          "text": "Relate results to the measured outcome and consider competing causes.",
+          "why": "A correlation or model demonstration alone does not establish all causal details."
+        }
+      ],
+      "misconception": {
+        "myth": "One successful animation proves that the biological mechanism is correct.",
+        "truth": "An animation illustrates a proposal. Experiments and independent evidence are needed to test mechanisms."
+      },
+      "ledger": [
+        [
+          "Treatment",
+          "One defined manipulated condition",
+          "Independent variable"
+        ],
+        [
+          "Measurement",
+          "Recorded response",
+          "Dependent variable"
+        ],
+        [
+          "Interpretation",
+          "Evidence plus limitations",
+          "Avoid claiming an unmeasured result"
+        ]
+      ],
+      "source": "Campbell Biology, supplied Chapters 9–10; explanations written for this unit."
+    }
+  ],
+  "questions": [
+    {
+      "id": "energy-q1",
+      "lesson": "energy",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which change is an oxidation?",
+      "options": [
+        "A molecule loses electrons",
+        "NAD+ gains electrons",
+        "ADP gains a phosphate",
+        "A molecule gains electrons"
+      ],
+      "answer": 0,
+      "explanation": "Oxidation is loss of electrons; reduction is gain. Phosphate transfer alone does not identify a redox event."
+    },
+    {
+      "id": "energy-q2",
+      "lesson": "energy",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "An enzyme speeds a reaction. Which statement remains true?",
+      "options": [
+        "The enzyme makes all reactions spontaneous",
+        "The enzyme changes the equilibrium position",
+        "The enzyme lowers the activation barrier",
+        "The enzyme supplies unlimited energy"
+      ],
+      "answer": 2,
+      "explanation": "An enzyme lowers the activation barrier. It does not alter the reaction’s overall free-energy change or equilibrium."
+    },
+    {
+      "id": "energy-q3",
+      "lesson": "energy",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "A cell couples an unfavorable synthesis to ATP hydrolysis. What must be true of the combined reaction?",
+      "options": [
+        "Its total free-energy change is favorable under the cell’s conditions",
+        "Its synthesis step becomes independent of ATP",
+        "ATP becomes the final electron acceptor",
+        "Every individual step must release energy"
+      ],
+      "answer": 0,
+      "explanation": "Coupling can make the sum favorable even when the synthesis alone is unfavorable. Individual steps need not all release energy."
+    },
+    {
+      "id": "glycolysis-q1",
+      "lesson": "glycolysis",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Where does glycolysis occur in a eukaryotic cell?",
+      "options": [
+        "Mitochondrial matrix",
+        "Cytosol",
+        "Thylakoid lumen",
+        "Intermembrane space"
+      ],
+      "answer": 1,
+      "explanation": "Glycolysis occurs in the cytosol. Pyruvate oxidation and most citric acid cycle reactions occur in the mitochondrial matrix."
+    },
+    {
+      "id": "glycolysis-q2",
+      "lesson": "glycolysis",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Four ATP are produced and two ATP are consumed. What is the net ATP yield per glucose?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Net yield subtracts the investment: 4 − 2 = 2 ATP."
+    },
+    {
+      "id": "glycolysis-q3",
+      "lesson": "glycolysis",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "If NAD+ cannot be regenerated, why will glycolysis eventually slow?",
+      "options": [
+        "Glucose cannot enter any cell",
+        "Oxygen is a direct glycolytic reactant",
+        "The oxidation step lacks its electron acceptor",
+        "Pyruvate instantly becomes six-carbon glucose"
+      ],
+      "answer": 2,
+      "explanation": "A glycolytic oxidation requires NAD+ as an electron acceptor. A finite NAD+ pool must be regenerated, by respiration or fermentation."
+    },
+    {
+      "id": "pyruvate-q1",
+      "lesson": "pyruvate",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "What is the two-carbon product that enters the citric acid cycle?",
+      "options": [
+        "Acetyl-CoA",
+        "Glucose",
+        "Oxygen",
+        "Lactate"
+      ],
+      "answer": 0,
+      "explanation": "Acetyl-CoA transfers a two-carbon acetyl group to oxaloacetate at the start of the cycle."
+    },
+    {
+      "id": "pyruvate-q2",
+      "lesson": "pyruvate",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "How much CO2 does pyruvate oxidation release per glucose?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "Two pyruvates form per glucose. Each loses one carbon as CO2, giving two CO2 in this stage."
+    },
+    {
+      "id": "pyruvate-q3",
+      "lesson": "pyruvate",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "A drug blocks pyruvate dehydrogenase. Which direct consequence is most likely?",
+      "options": [
+        "Less glucose-derived acetyl-CoA enters the cycle",
+        "More ATP is produced by the bridge reaction",
+        "Water splitting stops",
+        "NADP+ becomes the terminal acceptor"
+      ],
+      "answer": 0,
+      "explanation": "Blocking the bridge reduces conversion of glucose-derived pyruvate to acetyl-CoA. Other fuel sources may still supply acetyl-CoA."
+    },
+    {
+      "id": "citric-q1",
+      "lesson": "citric",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which molecule is regenerated at the end of the citric acid cycle?",
+      "options": [
+        "Glucose",
+        "Oxaloacetate",
+        "Oxygen",
+        "Pyruvate"
+      ],
+      "answer": 1,
+      "explanation": "Oxaloacetate is the four-carbon acceptor regenerated by the cycle."
+    },
+    {
+      "id": "citric-q2",
+      "lesson": "citric",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "How many NADH are produced by two turns of the cycle?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "10"
+      ],
+      "answer": 2,
+      "explanation": "Each turn forms three NADH, so two turns form six. Ten is the total across several glucose-oxidation stages, not the cycle alone."
+    },
+    {
+      "id": "citric-q3",
+      "lesson": "citric",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Why can oxygen removal slow the cycle even though O2 is not a direct cycle reactant?",
+      "options": [
+        "CO2 replaces oxygen in ATP synthase",
+        "The cycle requires light",
+        "Carrier recycling through the respiratory chain becomes limited",
+        "Oxaloacetate becomes a photon"
+      ],
+      "answer": 2,
+      "explanation": "Without the respiratory terminal acceptor, NADH oxidation is impaired. NAD+ becomes less available for further cycle reactions."
+    },
+    {
+      "id": "etc-q1",
+      "lesson": "etc",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which respiratory complex does not pump protons?",
+      "options": [
+        "Complex I",
+        "Complex II",
+        "Complex III",
+        "Complex IV"
+      ],
+      "answer": 1,
+      "explanation": "Complex II transfers electrons to Q but does not pump protons. I, III and IV contribute to proton translocation."
+    },
+    {
+      "id": "etc-q2",
+      "lesson": "etc",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Where do pumped protons accumulate in mitochondria?",
+      "options": [
+        "Cytosol only",
+        "Matrix",
+        "Intermembrane space",
+        "Thylakoid stroma"
+      ],
+      "answer": 2,
+      "explanation": "The respiratory chain moves protons from the matrix to the intermembrane space."
+    },
+    {
+      "id": "etc-q3",
+      "lesson": "etc",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "A compound blocks complex IV. Which immediate change is expected?",
+      "options": [
+        "Oxygen reduction and upstream electron flow decline",
+        "Glycolysis directly starts consuming O2",
+        "Complex II begins pumping protons",
+        "ATP synthase makes its own electron supply"
+      ],
+      "answer": 0,
+      "explanation": "Complex IV performs the terminal transfer to oxygen. A block restricts oxygen reduction and backs up electron flow upstream."
+    },
+    {
+      "id": "chemiosmosis-q1",
+      "lesson": "chemiosmosis",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "What passes through ATP synthase to power ATP synthesis?",
+      "options": [
+        "Electrons",
+        "CO2",
+        "Protons",
+        "Glucose"
+      ],
+      "answer": 2,
+      "explanation": "H+ flows down its electrochemical gradient through ATP synthase. Electrons move through separate chain components."
+    },
+    {
+      "id": "chemiosmosis-q2",
+      "lesson": "chemiosmosis",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "A protonophore makes the inner membrane leaky to H+. Which result is expected?",
+      "options": [
+        "ATP production becomes more tightly coupled",
+        "The gradient and coupled ATP output decrease",
+        "The citric acid cycle becomes photosynthesis",
+        "All proton movement stops"
+      ],
+      "answer": 1,
+      "explanation": "A proton leak dissipates the gradient, reducing ATP synthesis coupled to respiration. Electron transport may continue or increase under suitable conditions."
+    },
+    {
+      "id": "chemiosmosis-q3",
+      "lesson": "chemiosmosis",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "O2 consumption continues but ATP production falls after a treatment. Which mechanism best fits?",
+      "options": [
+        "An uncoupler allows protons to bypass ATP synthase",
+        "All glucose carbon becomes oxygen",
+        "NADH can no longer donate any electrons",
+        "ATP synthase replaces complex IV"
+      ],
+      "answer": 0,
+      "explanation": "Uncoupling can permit respiration while reducing ATP output because the proton gradient is dissipated without productive ATP synthesis."
+    },
+    {
+      "id": "fermentation-q1",
+      "lesson": "fermentation",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "What is the main role of fermentation?",
+      "options": [
+        "Make oxygen",
+        "Regenerate NAD+",
+        "Pump mitochondrial protons",
+        "Fix atmospheric CO2"
+      ],
+      "answer": 1,
+      "explanation": "Fermentation oxidizes NADH to regenerate NAD+, allowing glycolysis to continue."
+    },
+    {
+      "id": "fermentation-q2",
+      "lesson": "fermentation",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "What is the net ATP yield from glycolysis plus lactate fermentation per glucose?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "32"
+      ],
+      "answer": 1,
+      "explanation": "The net two ATP are made in glycolysis; lactate fermentation does not add ATP."
+    },
+    {
+      "id": "fermentation-q3",
+      "lesson": "fermentation",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Which finding distinguishes anaerobic respiration from fermentation?",
+      "options": [
+        "Use of an electron transport chain and a non-O2 terminal acceptor",
+        "Both always release oxygen",
+        "Absence of electron transfers",
+        "Use of the Calvin cycle"
+      ],
+      "answer": 0,
+      "explanation": "Anaerobic respiration uses a chain and an alternative terminal acceptor. Fermentation regenerates carriers by reducing organic molecules without a respiratory chain."
+    },
+    {
+      "id": "fuels-q1",
+      "lesson": "fuels",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which product of fatty acid beta-oxidation enters the citric acid cycle?",
+      "options": [
+        "Acetyl-CoA",
+        "Chlorophyll",
+        "O2",
+        "RuBP"
+      ],
+      "answer": 0,
+      "explanation": "Beta-oxidation generates acetyl-CoA units that can enter the cycle."
+    },
+    {
+      "id": "fuels-q2",
+      "lesson": "fuels",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Why must many amino acids be deaminated before use as fuel?",
+      "options": [
+        "Their amino groups must be removed before carbon-skeleton processing",
+        "All amino acids are six-carbon sugars",
+        "Nitrogen pumps protons directly",
+        "Deamination produces photons"
+      ],
+      "answer": 0,
+      "explanation": "Removing amino groups prepares carbon skeletons for entry into metabolic pathways."
+    },
+    {
+      "id": "fuels-q3",
+      "lesson": "fuels",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "A cell has abundant ATP and low energy demand. Which response is consistent with feedback control?",
+      "options": [
+        "Inhibition of some catabolic control enzymes",
+        "Unlimited acceleration of all glycolysis",
+        "Automatic conversion of all proteins to ATP",
+        "Activation of water splitting in mitochondria"
+      ],
+      "answer": 0,
+      "explanation": "ATP can signal energy sufficiency and inhibit some regulatory steps, coordinating fuel breakdown with demand."
+    },
+    {
+      "id": "chloroplast-q1",
+      "lesson": "chloroplast",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Where does the Calvin cycle occur?",
+      "options": [
+        "Thylakoid lumen",
+        "Stroma",
+        "Mitochondrial matrix",
+        "Cytosol only"
+      ],
+      "answer": 1,
+      "explanation": "The Calvin cycle occurs in the stroma, whereas light-reaction proteins occupy thylakoid membranes."
+    },
+    {
+      "id": "chloroplast-q2",
+      "lesson": "chloroplast",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "What is a granum?",
+      "options": [
+        "A stack of thylakoids",
+        "A molecule of glucose",
+        "The outer envelope",
+        "An ATP synthase electron"
+      ],
+      "answer": 0,
+      "explanation": "A granum is a thylakoid stack. Its membrane surrounds internal lumen spaces."
+    },
+    {
+      "id": "chloroplast-q3",
+      "lesson": "chloroplast",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Which statement about green plant cells is correct?",
+      "options": [
+        "They can use both chloroplast photosynthesis and mitochondrial respiration",
+        "They never use oxygen",
+        "Their mitochondria are replaced by chloroplasts",
+        "They only make ATP at night"
+      ],
+      "answer": 0,
+      "explanation": "Photosynthetic plant cells can carry out both photosynthesis and cellular respiration."
+    },
+    {
+      "id": "pigments-q1",
+      "lesson": "pigments",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which photosystem operates first in linear electron flow?",
+      "options": [
+        "Photosystem I",
+        "Photosystem II",
+        "ATP synthase",
+        "The Calvin photosystem"
+      ],
+      "answer": 1,
+      "explanation": "Linear flow starts at photosystem II, then reaches photosystem I. The names reflect discovery order."
+    },
+    {
+      "id": "pigments-q2",
+      "lesson": "pigments",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "What does an action spectrum measure?",
+      "options": [
+        "A biological response at different wavelengths",
+        "Only one pigment’s absorption",
+        "The number of CO2 molecules in one ATP",
+        "Membrane thickness"
+      ],
+      "answer": 0,
+      "explanation": "An action spectrum measures biological effectiveness, such as photosynthetic activity, across wavelengths."
+    },
+    {
+      "id": "pigments-q3",
+      "lesson": "pigments",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Why is excitation transfer in an antenna different from reaction-center electron transfer?",
+      "options": [
+        "Excitation transfers energy; the reaction center transfers an electron to an acceptor",
+        "Both are always identical electron movements",
+        "Antenna pigments perform the Calvin cycle",
+        "The reaction center only reflects light"
+      ],
+      "answer": 0,
+      "explanation": "Antenna pigments funnel excitation energy, while a reaction center performs charge separation by transferring an electron."
+    },
+    {
+      "id": "light-q1",
+      "lesson": "light",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Where does the O2 released by photosynthesis come from?",
+      "options": [
+        "CO2",
+        "ATP",
+        "Water",
+        "Glucose"
+      ],
+      "answer": 2,
+      "explanation": "Water oxidation at PSII supplies electrons and releases oxygen."
+    },
+    {
+      "id": "light-q2",
+      "lesson": "light",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Which pair links the light reactions to the Calvin cycle?",
+      "options": [
+        "ATP and NADPH",
+        "O2 and FADH2",
+        "Lactate and ethanol",
+        "Pyruvate and oxygen"
+      ],
+      "answer": 0,
+      "explanation": "ATP provides energy and NADPH provides reducing power for Calvin-cycle reactions."
+    },
+    {
+      "id": "light-q3",
+      "lesson": "light",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "A chloroplast needs additional ATP relative to NADPH. Which pathway can help?",
+      "options": [
+        "Cyclic electron flow around PSI",
+        "Lactate fermentation in the lumen",
+        "Blocking all light absorption",
+        "Releasing glucose directly from PSII"
+      ],
+      "answer": 0,
+      "explanation": "Cyclic electron flow around PSI supports additional proton-gradient-driven ATP production without net NADPH production through that route."
+    },
+    {
+      "id": "calvin-q1",
+      "lesson": "calvin",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "What is the net exported three-carbon product of the Calvin cycle?",
+      "options": [
+        "G3P",
+        "Oxygen",
+        "Acetyl-CoA",
+        "NADH"
+      ],
+      "answer": 0,
+      "explanation": "G3P is the immediate net carbon product. It can later contribute to sugar synthesis."
+    },
+    {
+      "id": "calvin-q2",
+      "lesson": "calvin",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "How many ATP and NADPH are needed for one net G3P from three CO2?",
+      "options": [
+        "3 ATP and 2 NADPH",
+        "9 ATP and 6 NADPH",
+        "6 ATP and 9 NADPH",
+        "No ATP or NADPH"
+      ],
+      "answer": 1,
+      "explanation": "Carbon fixation, reduction and RuBP regeneration together require nine ATP and six NADPH for one net G3P."
+    },
+    {
+      "id": "calvin-q3",
+      "lesson": "calvin",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Why would carbon fixation decline after prolonged darkness even though photons are not direct Calvin-cycle reactants?",
+      "options": [
+        "ATP/NADPH supply and light-linked regulation change",
+        "The cycle’s only substrate is a photon",
+        "CO2 must first become oxygen",
+        "Rubisco becomes a mitochondrial carrier"
+      ],
+      "answer": 0,
+      "explanation": "The cycle depends on energy and reducing power normally supplied by light reactions, as well as light-linked regulation."
+    },
+    {
+      "id": "photorespiration-q1",
+      "lesson": "photorespiration",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which enzyme can react with both CO2 and O2?",
+      "options": [
+        "Rubisco",
+        "ATP synthase",
+        "Complex IV",
+        "Lactate dehydrogenase"
+      ],
+      "answer": 0,
+      "explanation": "Rubisco can catalyze RuBP carboxylation or oxygenation."
+    },
+    {
+      "id": "photorespiration-q2",
+      "lesson": "photorespiration",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Why can stomatal closure increase photorespiration?",
+      "options": [
+        "It may lower internal CO2 relative to O2",
+        "It opens all thylakoid membranes",
+        "It replaces O2 with ATP",
+        "It directly makes glucose"
+      ],
+      "answer": 0,
+      "explanation": "Closure limits gas exchange and can reduce internal CO2, increasing competition from O2 at Rubisco."
+    },
+    {
+      "id": "photorespiration-q3",
+      "lesson": "photorespiration",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Which observation is most consistent with increased photorespiration?",
+      "options": [
+        "Reduced net carbon gain despite ongoing light absorption",
+        "A new large ATP yield from Rubisco",
+        "No carbon loss under any conditions",
+        "Conversion of all leaf CO2 into oxygen"
+      ],
+      "answer": 0,
+      "explanation": "Photorespiration consumes resources and can release CO2, decreasing net productive carbon gain."
+    },
+    {
+      "id": "c4cam-q1",
+      "lesson": "c4cam",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which mechanism primarily separates CO2 capture and the Calvin cycle in time?",
+      "options": [
+        "C4",
+        "CAM",
+        "Aerobic respiration",
+        "Glycolysis"
+      ],
+      "answer": 1,
+      "explanation": "CAM captures CO2 mainly at night and releases stored CO2 for daytime Calvin-cycle activity."
+    },
+    {
+      "id": "c4cam-q2",
+      "lesson": "c4cam",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Which statement correctly describes C4 plants?",
+      "options": [
+        "Initial fixation and the Calvin cycle are separated across cell types",
+        "The Calvin cycle is absent",
+        "Stomata must be open only at night",
+        "Rubisco directly replaces ATP synthase"
+      ],
+      "answer": 0,
+      "explanation": "C4 metabolism typically separates initial fixation in mesophyll cells from Calvin-cycle activity in bundle-sheath cells."
+    },
+    {
+      "id": "c4cam-q3",
+      "lesson": "c4cam",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "Why are C4 and CAM not universally superior to C3 photosynthesis?",
+      "options": [
+        "Their benefits depend on environmental conditions and energetic tradeoffs",
+        "They never fix CO2",
+        "They produce no sugars",
+        "They only work without light"
+      ],
+      "answer": 0,
+      "explanation": "Benefits in heat or water limitation must be weighed against energetic costs and other environmental conditions."
+    },
+    {
+      "id": "comparison-q1",
+      "lesson": "comparison",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which mechanism is shared by respiration and photosynthesis?",
+      "options": [
+        "Chemiosmosis",
+        "Only lactate fermentation",
+        "Identical final electron acceptors",
+        "Absence of membranes"
+      ],
+      "answer": 0,
+      "explanation": "Both can use a proton gradient and ATP synthase, though electron donors and acceptors differ."
+    },
+    {
+      "id": "comparison-q2",
+      "lesson": "comparison",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Which pairing correctly identifies the high-proton compartments?",
+      "options": [
+        "Respiration: matrix; photosynthesis: stroma",
+        "Respiration: intermembrane space; photosynthesis: lumen",
+        "Respiration: lumen; photosynthesis: cytosol",
+        "Both: cytosol"
+      ],
+      "answer": 1,
+      "explanation": "Protons accumulate in the mitochondrial intermembrane space and thylakoid lumen, then return through ATP synthase."
+    },
+    {
+      "id": "comparison-q3",
+      "lesson": "comparison",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "A leaf releases net O2 in bright light. What can you conclude?",
+      "options": [
+        "Gross photosynthetic O2 production exceeds respiratory O2 consumption under those conditions",
+        "Mitochondrial respiration has necessarily stopped",
+        "O2 was produced from CO2",
+        "Every cell in the leaf has identical gas exchange"
+      ],
+      "answer": 0,
+      "explanation": "Net exchange is a balance of processes. Positive net O2 release does not show that respiration is absent."
+    },
+    {
+      "id": "experiments-q1",
+      "lesson": "experiments",
+      "level": 1,
+      "type": "mcq",
+      "prompt": "Which is the dependent variable in a test of light intensity and net O2 production?",
+      "options": [
+        "Measured change in O2",
+        "Lamp setting",
+        "The hypothesis",
+        "The control label"
+      ],
+      "answer": 0,
+      "explanation": "The dependent variable is the measured response. Light intensity is the manipulated independent variable."
+    },
+    {
+      "id": "experiments-q2",
+      "lesson": "experiments",
+      "level": 2,
+      "type": "mcq",
+      "prompt": "Why include biological replicates?",
+      "options": [
+        "To assess variation between independent samples",
+        "To guarantee the desired result",
+        "To remove the need for controls",
+        "To turn a diagram into a measurement"
+      ],
+      "answer": 0,
+      "explanation": "Replicates characterize variability. They do not replace controls or guarantee a particular outcome."
+    },
+    {
+      "id": "experiments-q3",
+      "lesson": "experiments",
+      "level": 3,
+      "type": "mcq",
+      "prompt": "In a light-versus-dark test, O2 rises only in light. Which interpretation is most defensible?",
+      "options": [
+        "Net O2 balance differs between these tested conditions",
+        "All light wavelengths have identical effects",
+        "Every pathway in every species is proven",
+        "The dark sample has no living cells"
+      ],
+      "answer": 0,
+      "explanation": "The result supports a condition-dependent difference in net O2 balance. It does not establish untested claims about wavelengths or all organisms."
+    }
+  ],
+  "glossary": {
+    "ATP": {
+      "definition": "Adenosine triphosphate: a molecule whose hydrolysis can be coupled to cellular work.",
+      "lesson": "energy"
+    },
+    "ADP": {
+      "definition": "Adenosine diphosphate; adding Pi with an energy input can regenerate ATP.",
+      "lesson": "energy"
+    },
+    "Pi": {
+      "definition": "Inorganic phosphate, a reactant in ATP formation from ADP.",
+      "lesson": "chemiosmosis"
+    },
+    "NADH": {
+      "definition": "The reduced form of NAD+, carrying electrons toward respiratory pathways.",
+      "lesson": "energy"
+    },
+    "NADPH": {
+      "definition": "A reduced electron carrier supplying reducing power to biosynthesis, including Calvin-cycle reactions.",
+      "lesson": "light"
+    },
+    "FADH2": {
+      "definition": "Reduced FAD; FAD-linked electrons can enter the respiratory chain at a different point from NADH.",
+      "lesson": "etc"
+    },
+    "Glycolysis": {
+      "definition": "Cytosolic glucose breakdown to two pyruvates, with net ATP and NADH capture.",
+      "lesson": "glycolysis"
+    },
+    "Pyruvate": {
+      "definition": "A three-carbon product of glycolysis, converted to acetyl-CoA in aerobic glucose oxidation.",
+      "lesson": "pyruvate"
+    },
+    "Acetyl-CoA": {
+      "definition": "A carrier of a two-carbon acetyl group entering the citric acid cycle.",
+      "lesson": "pyruvate"
+    },
+    "Oxaloacetate": {
+      "definition": "The four-carbon acceptor regenerated in the citric acid cycle.",
+      "lesson": "citric"
+    },
+    "Matrix": {
+      "definition": "The compartment enclosed by the mitochondrial inner membrane.",
+      "lesson": "etc"
+    },
+    "Cristae": {
+      "definition": "Folds of the mitochondrial inner membrane that increase membrane area.",
+      "lesson": "etc"
+    },
+    "Intermembrane space": {
+      "definition": "The space between mitochondrial outer and inner membranes; the respiratory high-proton side.",
+      "lesson": "etc"
+    },
+    "Ubiquinone": {
+      "definition": "Q: a mobile electron carrier within the mitochondrial inner membrane.",
+      "lesson": "etc"
+    },
+    "Cytochrome c": {
+      "definition": "A mobile respiratory electron carrier on the intermembrane-space side of the inner membrane.",
+      "lesson": "etc"
+    },
+    "Chemiosmosis": {
+      "definition": "Energy coupling through ion movement down an electrochemical gradient across a membrane.",
+      "lesson": "chemiosmosis"
+    },
+    "ATP synthase": {
+      "definition": "A membrane-associated enzyme coupling proton flow to ATP synthesis.",
+      "lesson": "chemiosmosis"
+    },
+    "Fermentation": {
+      "definition": "A pathway regenerating NAD+ by reducing organic molecules, sustaining glycolysis.",
+      "lesson": "fermentation"
+    },
+    "Stroma": {
+      "definition": "The chloroplast fluid region outside thylakoid lumen spaces; location of the Calvin cycle.",
+      "lesson": "chloroplast"
+    },
+    "Thylakoid": {
+      "definition": "An internal chloroplast membrane compartment containing light-reaction machinery.",
+      "lesson": "chloroplast"
+    },
+    "Lumen": {
+      "definition": "The space inside a thylakoid, where protons accumulate during light reactions.",
+      "lesson": "light"
+    },
+    "Granum": {
+      "definition": "A stack of thylakoid discs.",
+      "lesson": "chloroplast"
+    },
+    "Rubisco": {
+      "definition": "The enzyme catalyzing CO2 fixation to RuBP; it can also catalyze RuBP oxygenation.",
+      "lesson": "calvin"
+    },
+    "RuBP": {
+      "definition": "Ribulose bisphosphate, the five-carbon CO2 acceptor regenerated in the Calvin cycle.",
+      "lesson": "calvin"
+    },
+    "G3P": {
+      "definition": "Glyceraldehyde-3-phosphate, the three-carbon net product exported from the Calvin cycle.",
+      "lesson": "calvin"
+    },
+    "Photorespiration": {
+      "definition": "Carbon-recovery reactions following Rubisco oxygenation, with an energy cost and some carbon loss.",
+      "lesson": "photorespiration"
+    },
+    "Substrate-level phosphorylation": {
+      "definition": "Direct transfer of a phosphate from a phosphorylated substrate to ADP or GDP.",
+      "lesson": "glycolysis"
+    },
+    "Oxidative phosphorylation": {
+      "definition": "ATP production through respiratory electron transport and chemiosmosis.",
+      "lesson": "chemiosmosis"
+    },
+    "Photophosphorylation": {
+      "definition": "ATP production using a proton gradient associated with photosynthetic electron flow.",
+      "lesson": "light"
+    },
+    "Action spectrum": {
+      "definition": "A biological response plotted against light wavelength.",
+      "lesson": "pigments"
+    }
+  },
+  "sequenceActivities": [
+    {
+      "id": "respiration-route",
+      "title": "Rebuild the respiratory route",
+      "steps": [
+        "Glycolysis produces pyruvate",
+        "Pyruvate oxidation produces acetyl-CoA",
+        "The citric acid cycle loads carriers",
+        "The electron transport chain builds a gradient",
+        "Protons return through ATP synthase"
+      ],
+      "explanation": "The route links carbon oxidation to carrier reduction, electron transfer, a proton gradient and ATP synthesis. It is an overview, not a claim that every reaction starts only after the previous stage finishes."
+    },
+    {
+      "id": "calvin-route",
+      "title": "Rebuild the Calvin cycle",
+      "steps": [
+        "CO2 is fixed to RuBP",
+        "3-PGA intermediates are reduced",
+        "One net G3P can leave per three CO2",
+        "Most G3P carbon regenerates RuBP"
+      ],
+      "explanation": "For three CO2, six G3P are generated in the reduction stage; one is the net export and five support RuBP regeneration."
+    }
+  ]
+};

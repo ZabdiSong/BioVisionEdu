@@ -1,0 +1,21 @@
+﻿website_path,status,bytes,source_paths_or_generator,note
+assets/images/biology-kingdom.png,supplied,2762588,Broadcast/Weixin Image_20260201232022.png,Supplied project artwork
+assets/images/cast-preview.png,supplied,1759710,Duty/Weixin Image_20260219232408.png,Supplied project artwork
+assets/images/logo.png,supplied,318538,Platform Demo/BioVision/logo_1.png | Platform Demo/BioVision/logo.png | Platform Demo/BioVision-contents/BioVision/logo_1.png | Platform Demo/BioVision-contents/BioVision/logo.png,Supplied project artwork
+assets/images/ribosome-character.png,supplied,3671797,Animation（Chara/Unit1/Character Design/Weixin Image_20260126191700.png,Supplied project artwork
+assets/images/student-character.png,supplied,6952512,Duty/Weixin Image_20260219232400.png,Supplied project artwork
+assets/models/chloroplast.blend,created,1740204,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/chloroplast.glb,created,167836,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/light-reactions.blend,created,8285596,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/light-reactions.glb,created,1216220,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/mitochondrion.blend,created,2005684,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/mitochondrion.glb,created,316524,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/model-data.js,created,2784919,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/model-manifest.json,created,1114,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/respiratory-etc.blend,created,8258940,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/models/respiratory-etc.glb,created,1206348,tools/build_models.py,Educational schematic; no animation; not to scale
+assets/videos/etc-demo.mp4,supplied,184905,Platform Demo/BioVision/ETC video.mp4 | Platform Demo/BioVision-contents/BioVision/ETC video.mp4,Short supplied demo; not a complete narrated lecture
+assets/videos/etc-step-1.mp4,supplied,380979,Platform Demo/BioVision/step1.mp4 | Platform Demo/BioVision-contents/BioVision/step1.mp4,Short supplied demo; not a complete narrated lecture
+assets/videos/etc-step-2.mp4,supplied,96115,Platform Demo/BioVision/step2.mp4 | Platform Demo/BioVision-contents/BioVision/step2.mp4,Short supplied demo; not a complete narrated lecture
+assets/videos/etc-step-3.mp4,supplied,431583,Platform Demo/BioVision/step3.mp4 | Platform Demo/BioVision-contents/BioVision/step3.mp4,Short supplied demo; not a complete narrated lecture
+assets/videos/etc-step-4.mp4,supplied,397595,Platform Demo/BioVision/step4.mp4 | Platform Demo/BioVision-contents/BioVision/step4.mp4,Short supplied demo; not a complete narrated lecture

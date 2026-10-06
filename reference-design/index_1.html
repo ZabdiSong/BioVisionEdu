@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioVision - Biology Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 身份选择模态框 -->
+    <div class="modal-overlay" id="identityModal">
+        <div class="modal">
+            <h3>Select Your Identity</h3>
+            <div class="identity-options">
+                <div class="identity-option" data-identity="student">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Student</h4>
+                    <p>Access courses, animations, practice questions, and discussion forums</p>
+                </div>
+                <div class="identity-option" data-identity="educator">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h4>Educator</h4>
+                    <p>View class progress, assign questions, and manage discussions (Continue)</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary confirm-btn" id="confirmIdentity" disabled>
+                    Continue
+                </button>
+                <p class="modal-note">
+                    Note: Educator features are currently in development and reserved for future use.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顶部栏 -->
+    <header class="site-header">
+        <div class="brand">
+            <img src="logo.png" alt="BioVision EDU LOGO">
+            <span>BioVision EDU</span>
+        </div>
+        <nav class="main-nav">
+            <!-- 搜索框现在位于导航栏内，垂直布局 -->
+            <div class="search-wrapper">
+                <input type="text" id="searchInput"
+                    placeholder="Universal Finder: Search for biology concepts, animations, 3D models, questions, or discussions...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active" data-page="home">Home</a></li>
+                <li><a href="#" data-page="study">Study</a></li>
+                <li><a href="#" data-page="gallery">Gallery</a></li>
+                <li><a href="#" data-page="exam">Exam</a></li>
+                <li><a href="#" data-page="forum">Forum</a></li>
+                <li><a href="#" data-page="mybio">MyBio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <!-- 内容区 -->
+    <main class="content">
+        <!-- 首页 -->
+        <section id="home" class="page-content active">
+            <div class="page-header">
+                <h1>BioVision Biology Learning Platform</h1>
+                <p>A specialized website designed to help students learn biology with courses, animations, 3D models,
+                    practice questions, and discussion community</p>
+            </div>
+            <div class="carousel">
+                <h2 id="carouselTitle">Personalized Learning Assistant</h2>
+                <p id="carouselText">Mitochondria are often called the powerhouses of the cell 
+                    because they generate most of the cell’s ATP through the Electron Transport 
+                    Chain and oxidative phosphorylation.</p>
+                <div class="carousel-controls">
+                    <div class="carousel-dot active" data-slide="0"></div>
+                    <div class="carousel-dot" data-slide="1"></div>
+                    <div class="carousel-dot" data-slide="2"></div>
+                </div>
+            </div>
+            <!-- 新增的按钮区域 -->
+            <div class="journal-section">
+                <button class="btn btn-primary" id="startJournalBtn">
+                    <i class="fas fa-book-open"></i> Start my Journey
+                </button>
+            </div>
+            <iframe 
+                src="introduce.mp4" 
+                width="800" 
+                height="500" 
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+            <!-- 结束 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Platform Introduction</h3>
+                </div>
+                <div class="card-body">
+                    <p>BioVision is a specialized website designed to help students learn biology. Here you can:</p>
+                    <ul>
+                        <li>Watch systematic biology courses</li>
+                        <li>View vivid animations and 3D models</li>
+                        <li>Practice questions to reinforce knowledge</li>
+                        <li>Participate in discussions and view biology questions from others</li>
+                        <li>Track your learning progress and history</li>
+                    </ul>
+                    <p>The platform is divided into six main sections: Home, Study, Gallery, Exam, Forum, and MyBio.</p>
+                </div>
+            </div>
+            <div class="donation-section">
+                <h3>Support BioVision Development</h3>
+                <p>If you'd like to support website development and help more students benefit, you can donate here.</p>
+                <button class="btn btn-primary" id="donateBtn">
+                    <i class="fas fa-heart"></i> Support Us
+                </button>
+            </div>
+        </section>
+
+
+        <!-- 学习页面 -->
+        <section id="study" class="page-content active">
+            <div class="page-header">
+                <h1>Study Center</h1>
+                <p>Complete knowledge system organized according to Campbell Biology textbook for systematic biology
+                    learning</p>
+            </div>
+            <div class="study-layout">
+                <!-- 左侧章节树 -->
+                <!-- 左侧章节树 - 折叠版本 -->
+                <div class="chapter-tree">
+                    <div class="section-title">
+                        <h3><i class="fas fa-sitemap"></i> Course Directory</h3>
+                    </div>
+
+                    <!-- Unit 1 - 默认展开 -->
+                    <!-- Unit 1 - 默认展开 -->
+                    <div class="tree-unit active expanded" data-unit="1">
+                        <div class="unit-header">
+                            <i class="fas fa-chevron-down unit-toggle"></i>
+                            <i class="fas fa-book-open"></i>
+                            <span class="unit-title">Unit 1: The Chemistry Of Life</span>
+                        </div>
+                        <div class="unit-content">
+                            <!-- Chapter 1.1 -->
+                            <div class="tree-chapter expanded" data-chapter="1.1">
+                                <div class="chapter-header">
+                                    <i class="fas fa-chevron-down chapter-toggle"></i>
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="chapter-title">Chapter 1: Water and Life</span>
+
+                                </div>
+                                <div class="chapter-content">
+                                    <div class="tree-concept active" data-concept="1.1.1">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="concept-title">Properties of Water and Life</span>
+                                    </div>
+                                    <div class="tree-concept" data-concept="1.1.2">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="concept-title">pH and Buffer Systems</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chapter 1.2 -->
+                            <div class="tree-chapter" data-chapter="1.2">
+                                <div class="chapter-header">
+                                    <i class="fas fa-chevron-right chapter-toggle"></i>
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="chapter-title">Chapter 2: Carbon Compounds</span>
+                                </div>
+                                <div class="chapter-content">
+                                    <div class="tree-concept" data-concept="1.2.1">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="concept-title">Carbohydrates</span>
+                                    </div>
+                                    <div class="tree-concept" data-concept="1.2.2">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="concept-title">Lipids</span>
+                                    </div>
+                                    <div class="tree-concept" data-concept="1.2.3">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="concept-title">Proteins</span>
+                                    </div>
+                                    <div class="tree-concept" data-concept="1.2.4">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="concept-title">Nucleic Acids</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 - 默认折叠 -->
+                    <div class="tree-unit" data-unit="2">
+                        <div class="unit-header">
+                            <i class="fas fa-chevron-right unit-toggle"></i>
+                            <i class="fas fa-book-open"></i>
+                            <span class="unit-title">Unit 2: The Cell</span>
+                        </div>
+                        <div class="unit-content">
+                            <!-- 内容会在点击时动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="tree-unit" data-unit="3">
+                        <div class="unit-header">
+                            <i class="fas fa-chevron-right unit-toggle"></i>
+                            <i class="fas fa-book-open"></i>
+                            <span class="unit-title">Unit 3: Genetics</span>
+                            <!-- <span class="unit-status">(4 chapters)</span> -->
+                        </div>
+                        <div class="unit-content">
+                            <!-- 内容会动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="tree-unit" data-unit="4">
+                        <div class="unit-header">
+                            <i class="fas fa-chevron-right unit-toggle"></i>
+                            <i class="fas fa-book-open"></i>
+                            <span class="unit-title">Unit 4: Mechanisms of Evolution</span>
+                            <!-- <span class="unit-status">(5 chapters)</span> -->
+                        </div>
+                        <div class="unit-content">
+                            <!-- 内容会动态加载 -->
+                        </div>
+                    </div>
+
+                    <!-- Unit 5 -->
+                    <div class="tree-unit" data-unit="5">
+                        <div class="unit-header">
+                            <i class="fas fa-chevron-right unit-toggle"></i>
+                            <i class="fas fa-book-open"></i>
+                            <span class="unit-title">Unit 5: The Evolutionary History Of Biological Diversity</span>
+                            <!-- <span class="unit-status">(3 chapters)</span> -->
+                        </div>
+                        <div class="unit-content">
+                            <!-- 内容会动态加载 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧内容区 -->
+                <div class="concept-content">
+                    <!-- 概念标题和路径 -->
+                    <div class="concept-header">
+                        <div class="concept-title">
+                            <h2 id="currentConceptTitle">Properties of Water and Life</h2>
+                            <div class="concept-path" id="currentConceptPath">Unit 1 / Chapter 1 / Concept 1</div>
+                        </div>
+                        <div class="header-actions">
+                            <button class="btn btn-secondary" id="saveConceptBtn">
+                                <i class="fas fa-bookmark"></i> Save
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 拟人动画 -->
+                    <div class="personified-animation">
+                        <h3><i class="fas fa-user-friends"></i> 3D animation</h3>
+                        <p>Watch an engaging animated story that personifies water molecules and their interactions in
+                            living systems.</p>
+                        <div class="animation-container">
+                            <!-- <div class="video-placeholder" id="personifiedVideo">
+                                <div class="video-overlay">
+                                    <i class="fas fa-play-circle"></i>
+                                    <p>Water Molecule Adventures</p>
+                                </div>
+                            </div> -->
+
+                            <!-- <video id="personifiedVideo" controls poster="path/to/poster.jpg" class="video-player">
+                                <source src="path/to/water-molecule-animation.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> -->
+
+                            <!-- 或者嵌入外部平台（如Vimeo、YouTube） -->
+                            <iframe id="personifiedVideo" class="video-player"
+                                src="ETC video.mp4" frameborder="0"
+                                allowfullscreen></iframe>
+
+                        </div>
+                        <div class="animation-controls">
+                            <button class="btn btn-primary" id="playAnimationBtn">
+                                <i class="fas fa-play"></i> Play Animation
+                            </button>
+                            <button class="btn btn-secondary" id="downloadAnimationBtn">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 简单解释 -->
+                    <div class="simple-explanation">
+                        <h3><i class="fas fa-info-circle"></i> Concept Overview</h3>
+                        <div class="explanation-content">
+                            <p>Use the 5W（What Where Why Who How） method to understand this process：
+                                <!--<span class="keyword" data-keyword="cohesion">cohesion
+                                    <span class="keyword-tooltip">
+                                        <span class="tooltip-close">×</span>
+                                        <h5>Cohesion</h5>
+                                        <p>The attraction between molecules of the same substance. In water, hydrogen
+                                            bonds cause molecules to stick together.</p>
+                                    </span>
+                                </span>,-->
+                                <!--<span class="keyword" data-keyword="adhesion">adhesion
+                                    <span class="keyword-tooltip">
+                                        <span class="tooltip-close">×</span>
+                                        <h5>Adhesion</h5>
+                                        <p>The attraction between molecules of different substances. Water adheres to
+                                            surfaces, allowing capillary action.</p>
+                                    </span>
+                                </span>,
+                                high specific heat, and being a universal solvent. These
+                                characteristics allow water to support cellular functions and maintain homeostasis.
+                            </p>-->
+
+                            <div class="key-points">
+                                <h4>Key Points:</h4>
+                                <ul>
+                                    <li>What: The Electron Transport Chain is a series of protein complexes that transfer electrons from 
+                                        <span class="keyword" data-keyword="nadh">NADH<span class="keyword-tooltip"></span></span> and 
+                                        <span class="keyword" data-keyword="fadh2">FADH₂<span class="keyword-tooltip"></span></span> to oxygen, releasing energy.
+                                    </li>
+                                    <li>Where: It occurs on the inner mitochondrial membrane (or the 
+                                        <span class="keyword" data-keyword="plasma-membrane">plasma membrane<span class="keyword-tooltip"></span></span> in prokaryotes).
+                                    </li>
+                                    <li>Why: ETC uses the released energy to pump protons and create a 
+                                        <span class="keyword" data-keyword="proton-gradient">proton gradient<span class="keyword-tooltip"></span></span>.
+                                    </li>
+                                    <li>Who: The main players are 
+                                        <span class="keyword" data-keyword="complexes-i-iv">Complexes I–IV<span class="keyword-tooltip"></span></span>, 
+                                        <span class="keyword" data-keyword="ubiquinone">ubiquinone (Q)<span class="keyword-tooltip"></span></span>, 
+                                        <span class="keyword" data-keyword="cytochrome-c">cytochrome c<span class="keyword-tooltip"></span></span>, and 
+                                        <span class="keyword" data-keyword="atp-synthase">ATP synthase<span class="keyword-tooltip"></span></span>.
+                                    </li>
+                                    <li>How: Electrons move step by step through the complexes, driving proton pumping, and the resulting gradient powers ATP synthase to produce ATP.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 图示/模型入口 -->
+                    <div class="visual-models">
+                        <h3><i class="fas fa-cube"></i> 3D Models & Visualizations</h3>
+                        <div class="models-grid">
+                            <div class="model-card" data-model="water-molecule" data-type="3dmodel"
+                                data-tags="unit1,water,molecule,polarity">
+                                <div class="model-preview">
+                                    <i class="fas fa-atom"></i>
+                                </div>
+                                <h4>Mitochondrial Inner Membrane</h4>
+                                <!--<p>Interactive model showing molecular structure</p>-->
+                                <button class="btn btn-secondary btn-sm view-model-btn">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                            <div class="model-card" data-model="hydrogen-bond" data-type="3dmodel"
+                                data-tags="unit1,hydrogen-bonding,intermolecular">
+                                <div class="model-preview">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                                <h4>Electron Transport Complexes (I–IV)</h4>
+                                <!-- <p>Visualization of intermolecular forces</p> -->
+                                <button class="btn btn-secondary btn-sm view-model-btn">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                            <div class="model-card" data-model="capillary-action" data-type="3dmodel"
+                                data-tags="unit1,plants,transport,adhesion">
+                                <div class="model-preview">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <h4>Electron Transport Complexes (I–IV)</h4>
+                                <!-- <p>Demonstration of water movement in plants</p> -->
+                                <button class="btn btn-secondary btn-sm view-model-btn">
+                                    <i class="fas fa-expand"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 学习步骤 -->
+                    <div class="learning-steps">
+                        <h3><i class="fas fa-road"></i> Step-by-Step Learning Process</h3>
+
+                        <!-- 完整视频讲解 -->
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Complete Video Explanation</h4>
+                                <p>Watch a comprehensive video with 3D animation and instructor explanation.</p>
+                                <div class="video-container">
+
+                                    <!-- <div class="video-placeholder" id="mainVideo">
+                                        <div class="video-overlay">
+                                            <i class="fas fa-play-circle"></i>
+                                            <p>Water Properties Explained (15:32)</p>
+                                        </div> 
+
+
+                                    </div>  -->
+
+                                    <iframe id="mainVideo" class="video-player"
+                                        src="ETC video.mp4" frameborder="0"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <button class="btn btn-primary" id="watchVideoBtn">
+                                    <i class="fas fa-play-circle"></i> Play Full Video
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 步骤拆解 -->
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Step-by-Step Breakdown</h4>
+                                <p>Interactive breakdown of key processes. Click each step to play a short animation
+                                    segment.</p>
+                                <div class="step-buttons">
+                                    <button class="btn btn-secondary step-btn active" data-step="1">
+                                        <span class="step-label">Step 1:</span> where do the elections come from 
+                                    </button>
+                                    <button class="btn btn-secondary step-btn" data-step="2">
+                                        <span class="step-label">Step 2:</span> how do they transfer
+                                    </button>
+                                    <button class="btn btn-secondary step-btn" data-step="3">
+                                        <span class="step-label">Step 3:</span> what is energy used for
+                                    </button>
+                                    <button class="btn btn-secondary step-btn" data-step="4">
+                                        <span class="step-label">Step 4:</span> role of oxygen
+                                    </button>
+                                </div>
+                                <div class="step-animation-container">
+                                    <div id="step-animation" class="active">
+                                        <h5>Step 1: where do the elections come from </h5>
+                                        <p>·Electrons are delivered by NADH and FADH₂</p>
+                                        <p>·They carry high-energy electrons</p>
+                                        <p>·ETC uses these electrons to release energy gradually</p>
+                                        <!-- 简化视频容器 -->
+                                        <div id="video-container">
+                                            <iframe id="stepVideo" src="step1.mp4"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    <!-- 小题目练习 -->
+                    <div class="practice-questions">
+                        <div class="section-title">
+                            <h3><i class="fas fa-pencil-alt"></i> Practice Questions</h3>
+                            <span class="question-count">5 questions</span>
+                        </div>
+                        <div class="question-filters">
+                            <div class="tag-container">
+                                <span class="tag active" data-tag="all">All</span>
+                                <span class="tag" data-tag="easy">Easy</span>
+                                <span class="tag" data-tag="medium">Medium</span>
+                                <span class="tag" data-tag="hard">Hard</span>
+                                <span class="tag" data-tag="hydrogen-bonding">ATP</span>
+                                <span class="tag" data-tag="cohesion">NADH</span>
+                            </div>
+                        </div>
+                        <div class="questions-list">
+                            <!-- Question 1 -->
+                            <div class="question-item" data-difficulty="easy">
+                                <!--<div class="question-header">
+                                    <span class="difficulty-badge easy">Easy</span>
+                                    <span class="question-tags">
+                                        <span class="mini-tag">Hydrogen Bonding</span>
+                                    </span>
+                                </div>-->
+                                <div class="question-content">
+                                    <p>What is the main role of NADH in the electron transport chain (ETC)?</p>
+                                    <div class="options">
+                                        <div class="option">
+                                            <input type="radio" name="q1" id="q1a">
+                                            <label for="q1a">To pump protons directly into the intermembrane space</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="q1" id="q1b">
+                                            <label for="q1b">To carry electrons to the ETC and donate them to Complex I</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="q1" id="q1c">
+                                            <label for="q1c">To synthesize ATP directly</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="q1" id="q1d">
+                                            <label for="q1d">To break down glucose into pyruvate</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-secondary btn-sm show-answer-btn">Show Answer</button>
+                                    <button class="btn btn-secondary btn-sm save-question-btn">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="question-item" data-difficulty="medium">
+                                <!--<div class="question-header">
+                                    <span class="difficulty-badge medium">Medium</span>
+                                    <span class="question-tags">
+                                        <span class="mini-tag">Cohesion</span>
+                                        <span class="mini-tag">Adhesion</span>
+                                    </span>
+                                </div>-->
+                                <div class="question-content">
+                                    <p>During the ETC, protons are pumped from the mitochondrial matrix to the intermembrane space. Which of the following statements is correct?</p>
+                                    <div class="options">
+                                        <div class="option">
+                                            <input type="radio" name="q2" id="q2a">
+                                            <label for="q2a">This proton movement happens without the transfer of electrons.</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="q2" id="q2b">
+                                            <label for="q2b">The proton gradient created is used by ATP synthase to produce ATP.</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="q2" id="q2c">
+                                            <label for="q2c">Protons flow from the intermembrane space back to the matrix through diffusion only.</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" name="q2" id="q2d">
+                                            <label for="q2d">The proton gradient has no effect on energy production.
+Answer: B. The proton gradient created is used by ATP synthase to produce ATP</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question-actions">
+                                    <button class="btn btn-secondary btn-sm show-answer-btn">Show Answer</button>
+                                    <button class="btn btn-secondary btn-sm save-question-btn">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="practice-actions">
+                            <button class="btn btn-primary" id="startQuizBtn">
+                                <i class="fas fa-play"></i> Start Practice Quiz
+                            </button>
+                            <button class="btn btn-secondary" id="viewAllQuestionsBtn">
+                                <i class="fas fa-list"></i> View All Questions
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 讨论区 -->
+                    <div class="discussion-section">
+                        <div class="section-title">
+                            <h3><i class="fas fa-comments"></i> Discussion</h3>
+                            <button class="btn btn-primary btn-sm" id="createPostBtn">
+                                <i class="fas fa-plus"></i> New Post
+                            </button>
+                        </div>
+                        <div class="discussion-filters">
+                            <select class="filter-select">
+                                <option value="recent">Most Recent</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="unanswered">Unanswered</option>
+                            </select>
+                        </div>
+                        <div class="discussion-list">
+                            <div class="discussion-item">
+                                <div class="discussion-header">
+                                    <div class="discussion-author">
+                                        <div class="avatar">S</div>
+                                        <div>
+                                            <h5>Why does ice float?</h5>
+                                            <span class="discussion-meta">Posted by Student123 • 2 hours ago</span>
+                                        </div>
+                                    </div>
+                                    <span class="reply-count">
+                                        <i class="fas fa-comment"></i> 5 replies
+                                    </span>
+                                </div>
+                                <div class="discussion-content">
+                                    <p>I'm a bit confused about NADH and FADH2. Why do they donate electrons at different complexes? Does it affect how much ATP is made?</p>
+                                </div>
+                                <div class="discussion-tags">
+                                    <span class="mini-tag">Density</span>
+                                    <span class="mini-tag">Hydrogen Bonding</span>
+                                </div>
+                            </div>
+
+                            <div class="discussion-item">
+                                <div class="discussion-header">
+                                    <div class="discussion-author">
+                                        <div class="avatar">T</div>
+                                        <div>
+                                            <h5>Real-world examples of capillary action</h5>
+                                            <span class="discussion-meta">Posted by BioTeacher • 1 day ago</span>
+                                        </div>
+                                    </div>
+                                    <span class="reply-count">
+                                        <i class="fas fa-comment"></i> 12 replies
+                                    </span>
+                                </div>
+                                <div class="discussion-content">
+                                    <p>Can someone explain why protons are pumped across the membrane? I don’t really understand how that makes ATP.</p>
+                                </div>
+                                <div class="discussion-tags">
+                                    <span class="mini-tag">Capillary Action</span>
+                                    <span class="mini-tag">Plants</span>
+                                    <span class="mini-tag">Real World</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="discussion-actions">
+                            <button class="btn btn-secondary" id="viewAllDiscussionsBtn">
+                                <i class="fas fa-external-link-alt"></i> Go to Full Discussion Forum
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 资源库按钮 -->
+                    <div class="resource-buttons">
+                        <h3>More Resources</h3>
+                        <div class="resource-grid">
+                            <button class="btn btn-primary" id="view3dModelBtn">
+                                <i class="fas fa-cube"></i> View 3D Model Gallery
+                            </button>
+                            <button class="btn btn-secondary" id="practiceQuestionsBtn">
+                                <i class="fas fa-pencil-alt"></i> Advanced Practice (12)
+                            </button>
+                            <button class="btn btn-secondary" id="gotoGalleryBtn">
+                                <i class="fas fa-photo-video"></i> Animation Gallery
+                            </button>
+                            <button class="btn btn-secondary" id="downloadNotesBtn">
+                                <i class="fas fa-download"></i> Download Notes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关键词工具提示容器 -->
+        <div id="keywordTooltipContainer"></div>
+
+        <!-- 资源库页面 -->
+        <section id="gallery" class="page-content">
+            <div class="study-layout">
+                <!-- 左侧Gallery目录树 -->
+                <div class="chapter-tree">
+                    <div class="section-title">
+                        <h3><i class="fas fa-sitemap"></i> Gallery Directory</h3>
+                    </div>
+
+                    <!-- 简化后的目录 - 只保留一级标题 -->
+                    <div class="tree-unit active" data-target="#animation-section">
+                        <div class="unit-header">
+                            <i class="fas fa-film"></i>
+                            <span class="unit-title">Animation Resources</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#models-section">
+                        <div class="unit-header">
+                            <i class="fas fa-cube"></i>
+                            <span class="unit-title">3D Models</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#mistakes-section">
+                        <div class="unit-header">
+                            <i class="fas fa-tags"></i>
+                            <span class="unit-title">Mistake Collection & Tags</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#library-section">
+                        <div class="unit-header">
+                            <i class="fas fa-book-open"></i>
+                            <span class="unit-title">Custom Library</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#graph-section">
+                        <div class="unit-header">
+                            <i class="fas fa-project-diagram"></i>
+                            <span class="unit-title">Knowledge Graph</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#game-section">
+                        <div class="unit-header">
+                            <i class="fas fa-gamepad"></i>
+                            <span class="unit-title">Craft House</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧内容区 -->
+                <div class="concept-content">
+                    <div class="page-header">
+                        <h1>Resource Gallery</h1>
+                        <p>Animations, 3D models, custom library, and knowledge graph - comprehensive learning resources
+                        </p>
+                    </div>
+
+                    <!-- 3.3.1 Animation（动画） -->
+                    <div class="section-title" id="animation-section">
+                        <h2><i class="fas fa-photo-video"></i> Animation Resources</h2>
+                        <a href="#" class="btn btn-primary" id="viewAllAnimationsBtn">View All</a>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="resource-card animation-card" data-type="animation"
+                            data-tags="unit4,genetics,molecular-biology">
+                            <div class="resource-card-header">
+                                <div class="resource-badge animation-badge">
+                                    <i class="fas fa-play-circle"></i> Animation
+                                </div>
+                                <h3>DNA Replication Process</h3>
+                            </div>
+                            <div class="resource-card-body">
+                                <p>Complete animation showing DNA double helix unwinding and replication process</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 4</span>
+                                    <span class="tag">Genetics</span>
+                                    <span class="tag">Molecular Biology</span>
+                                </div>
+                            </div>
+                            <div class="resource-card-footer">
+                                <button class="btn btn-primary btn-sm preview-resource-btn">
+                                    <i class="fas fa-play"></i> Play Animation
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="resource-card animation-card" data-type="animation"
+                            data-tags="unit2,cell-division,cell-cycle">
+                            <div class="resource-card-header">
+                                <div class="resource-badge animation-badge">
+                                    <i class="fas fa-play-circle"></i> Animation
+                                </div>
+                                <h3>Cell Mitosis</h3>
+                            </div>
+                            <div class="resource-card-body">
+                                <p>Detailed animation showing various stages of cell mitosis</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 2</span>
+                                    <span class="tag">Cell Division</span>
+                                    <span class="tag">Cell Cycle</span>
+                                </div>
+                            </div>
+                            <div class="resource-card-footer">
+                                <button class="btn btn-primary btn-sm preview-resource-btn">
+                                    <i class="fas fa-play"></i> Play Animation
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="resource-card animation-card" data-type="animation"
+                            data-tags="unit4,genetics,central-dogma">
+                            <div class="resource-card-header">
+                                <div class="resource-badge animation-badge">
+                                    <i class="fas fa-play-circle"></i> Animation
+                                </div>
+                                <h3>Protein Synthesis</h3>
+                            </div>
+                            <div class="resource-card-body">
+                                <p>Animation showing the complete transcription and translation process from DNA to
+                                    protein</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 4</span>
+                                    <span class="tag">Genetics</span>
+                                    <span class="tag">Central Dogma</span>
+                                </div>
+                            </div>
+                            <div class="resource-card-footer">
+                                <button class="btn btn-primary btn-sm preview-resource-btn">
+                                    <i class="fas fa-play"></i> Play Animation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.3.2 3D Models（三维模型） -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="models-section">
+                        <h2><i class="fas fa-cube"></i> 3D Models</h2>
+                        <a href="#" class="btn btn-primary" id="viewAllModelsBtn">View All</a>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="resource-card model-card" data-type="3dmodel"
+                            data-tags="unit2,cell-structure,organelles">
+                            <div class="resource-card-header">
+                                <div class="resource-badge model-badge">
+                                    <i class="fas fa-cube"></i> 3D Model
+                                </div>
+                                <h3>Cell Organelles 3D Model</h3>
+                            </div>
+                            <div class="resource-card-body">
+                                <p>Complete cell organelle structure model with rotation and zoom capabilities</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 2</span>
+                                    <span class="tag">Cell Structure</span>
+                                    <span class="tag">Organelles</span>
+                                </div>
+                            </div>
+                            <div class="resource-card-footer">
+                                <button class="btn btn-primary btn-sm view-model-btn">
+                                    <i class="fas fa-expand"></i> View Model
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="resource-card model-card" data-type="3dmodel" data-tags="unit4,genetics,dna">
+                            <div class="resource-card-header">
+                                <div class="resource-badge model-badge">
+                                    <i class="fas fa-cube"></i> 3D Model
+                                </div>
+                                <h3>DNA Double Helix Structure</h3>
+                            </div>
+                            <div class="resource-card-body">
+                                <p>Interactive 3D model of DNA double helix structure</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 4</span>
+                                    <span class="tag">Genetics</span>
+                                    <span class="tag">DNA Structure</span>
+                                </div>
+                            </div>
+                            <div class="resource-card-footer">
+                                <button class="btn btn-primary btn-sm view-model-btn">
+                                    <i class="fas fa-expand"></i> View Model
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="resource-card model-card" data-type="3dmodel" data-tags="unit3,enzymes,metabolism">
+                            <div class="resource-card-header">
+                                <div class="resource-badge model-badge">
+                                    <i class="fas fa-cube"></i> 3D Model
+                                </div>
+                                <h3>Enzyme-Substrate Complex</h3>
+                            </div>
+                            <div class="resource-card-body">
+                                <p>3D model showing enzyme active site and substrate binding mechanism</p>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 3</span>
+                                    <span class="tag">Enzymes</span>
+                                    <span class="tag">Metabolism</span>
+                                </div>
+                            </div>
+                            <div class="resource-card-footer">
+                                <button class="btn btn-primary btn-sm view-model-btn">
+                                    <i class="fas fa-expand"></i> View Model
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.3.3 收藏标签（Mistake Collection & Tags） -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="mistakes-section">
+                        <h2><i class="fas fa-tags"></i> Mistake Collection & Tags</h2>
+                        <span>Organized by tags and units</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <p>View and organize your mistake collection. Tags can be edited in MyBio Center.</p>
+                            <div class="tag-container">
+                                <span class="tag active" data-tag="all">All Mistakes</span>
+                                <span class="tag" data-tag="unit1">Unit 1</span>
+                                <span class="tag" data-tag="unit2">Unit 2</span>
+                                <span class="tag" data-tag="unit3">Unit 3</span>
+                                <span class="tag" data-tag="unit4">Unit 4</span>
+                                <span class="tag" data-tag="difficult">Difficult</span>
+                                <span class="tag" data-tag="calculation">Calculation</span>
+                                <span class="tag" data-tag="diagram">Diagram</span>
+                            </div>
+
+                            <div class="mistakes-list" style="margin-top: 1.5rem;">
+                                <div class="mistake-item">
+                                    <h4>Why is water considered a polar molecule?</h4>
+                                    <p>You answered: Because it has no charge</p>
+                                    <p><strong>Correct answer:</strong> Because it has uneven charge distribution with
+                                        oxygen being
+                                        slightly negative and hydrogen slightly positive</p>
+                                    <div class="mistake-tags" style="margin-top: 0.5rem;">
+                                        <span class="tag">Unit 1</span>
+                                        <span class="tag">Water Properties</span>
+                                        <span class="tag">Polarity</span>
+                                    </div>
+                                </div>
+
+                                <div class="mistake-item" style="margin-top: 1rem;">
+                                    <h4>DNA Replication Fork Diagram Analysis</h4>
+                                    <p>You answered: Leading strand synthesis is discontinuous</p>
+                                    <p><strong>Correct answer:</strong> Leading strand synthesis is continuous, while
+                                        lagging strand is discontinuous (Okazaki fragments)</p>
+                                    <div class="mistake-tags" style="margin-top: 0.5rem;">
+                                        <span class="tag">Unit 4</span>
+                                        <span class="tag">DNA Replication</span>
+                                        <span class="tag">Molecular Biology</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.3.4 自制文库 -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="library-section">
+                        <h2><i class="fas fa-book-open"></i> Custom Library</h2>
+                        <span>Team-created resources: explanation videos and handouts</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <p>All resources in this section are created by our team of educators and students. No
+                                copyrighted textbook content is included.</p>
+
+                            <div class="card-container" style="margin-top: 1.5rem;">
+                                <div class="resource-card custom-card" data-type="video"
+                                    data-tags="team-created,explanation,unit1">
+                                    <div class="resource-card-header">
+                                        <div class="resource-badge custom-badge">
+                                            <i class="fas fa-video"></i> Team Video
+                                        </div>
+                                        <h3>Water Properties Explained</h3>
+                                    </div>
+                                    <div class="resource-card-body">
+                                        <p>Team-created explanation video covering cohesion, adhesion, and polarity of
+                                            water molecules</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">Team Created</span>
+                                            <span class="tag">Unit 1</span>
+                                            <span class="tag">Video Explanation</span>
+                                        </div>
+                                    </div>
+                                    <div class="resource-card-footer">
+                                        <button class="btn btn-primary btn-sm preview-resource-btn">
+                                            <i class="fas fa-play"></i> Watch Video
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="resource-card custom-card" data-type="handout"
+                                    data-tags="team-created,handout,unit4">
+                                    <div class="resource-card-header">
+                                        <div class="resource-badge custom-badge">
+                                            <i class="fas fa-file-pdf"></i> Team Handout
+                                        </div>
+                                        <h3>DNA Replication Summary</h3>
+                                    </div>
+                                    <div class="resource-card-body">
+                                        <p>Comprehensive handout summarizing DNA replication process, enzymes involved,
+                                            and key concepts</p>
+                                        <div class="resource-tags">
+                                            <span class="tag">Team Created</span>
+                                            <span class="tag">Unit 4</span>
+                                            <span class="tag">Study Guide</span>
+                                        </div>
+                                    </div>
+                                    <div class="resource-card-footer">
+                                        <button class="btn btn-primary btn-sm download-resource-btn">
+                                            <i class="fas fa-download"></i> Download PDF
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.3.5 生物考纲知识图谱（Concept Web） -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="graph-section">
+                        <h2><i class="fas fa-project-diagram"></i> Knowledge Graph (Concept Web)</h2>
+                        <span>Networked concept relationship diagram</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Biology syllabus concept network diagram, click concepts to jump to corresponding
+                                learning pages.</p>
+
+                            <div class="concept-web-preview">
+                                <div class="concept-node" data-concept="water-properties">
+                                    <h4>Water Properties</h4>
+                                    <p>Polarity, Cohesion, Adhesion</p>
+                                </div>
+                                <div class="concept-node" data-concept="ph-scale">
+                                    <h4>pH Scale</h4>
+                                    <p>Acids, Bases, Buffers</p>
+                                </div>
+                                <div class="concept-node" data-concept="macromolecules">
+                                    <h4>Macromolecules</h4>
+                                    <p>Carbs, Lipids, Proteins, Nucleic Acids</p>
+                                </div>
+                                <div class="concept-node" data-concept="cell-structure">
+                                    <h4>Cell Structure</h4>
+                                    <p>Organelles, Membranes, Transport</p>
+                                </div>
+                                <div class="concept-node" data-concept="molecular-genetics">
+                                    <h4>Molecular Genetics</h4>
+                                    <p>DNA, RNA, Protein Synthesis</p>
+                                </div>
+                                <div class="concept-node" data-concept="evolution-mechanisms">
+                                    <h4>Evolution Mechanisms</h4>
+                                    <p>Natural Selection, Speciation</p>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 1.5rem;">
+                                <button class="btn btn-primary" id="openKnowledgeGraphBtn">
+                                    <i class="fas fa-expand"></i> Open Full Knowledge Graph
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.3.6 小游戏（Craft House） -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="game-section">
+                        <h2><i class="fas fa-gamepad"></i> Craft House</h2>
+                        <span>Interactive biology-themed mini games</span>
+                    </div>
+
+                    <!-- Craft House 内容占位，后续将用于放置小游戏或互动组件 -->
+                    <div id="craftHouseContent" class="craft-house-content" aria-label="Craft House placeholder">
+                        <!-- Placeholder: add your game widgets or content here later -->
+                    </div>
+            </div>
+        </section>
+
+        <!-- 考试页面 -->
+        <section id="exam" class="page-content">
+            <div class="study-layout">
+                <!-- 左侧考试类型目录树 -->
+                <div class="chapter-tree">
+                    <div class="section-title">
+                        <h3><i class="fas fa-sitemap"></i> Exam Directory</h3>
+                    </div>
+
+                    <!-- 简化后的目录 - 只保留一级标题 -->
+                    <div class="tree-unit active" data-target="#past-papers-section">
+                        <div class="unit-header">
+                            <i class="fas fa-file-alt"></i>
+                            <span class="unit-title">Past Exam Papers</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#general-questions-section">
+                        <div class="unit-header">
+                            <i class="fas fa-question-circle"></i>
+                            <span class="unit-title">General Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#concept-questions-section">
+                        <div class="unit-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <span class="unit-title">Concept Questions</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#unit-questions-section">
+                        <div class="unit-header">
+                            <i class="fas fa-book"></i>
+                            <span class="unit-title">Unit Questions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧内容区 -->
+                <div class="concept-content">
+                    <div class="page-header">
+                        <h1>Exams and Practice</h1>
+                        <p>Past exam papers, general questions, concept questions, and unit exercises - comprehensive
+                            problem-solving improvement</p>
+                    </div>
+
+                    <!-- 1. 真题部分 -->
+                    <div class="section-title" id="past-papers-section">
+                        <h2><i class="fas fa-file-alt"></i> Past Exam Papers</h2>
+                        <span>Categorized by year and exam type</span>
+                    </div>
+
+                    <div class="card-container">
+
+                        <div class="card exam-card" data-difficulty="normal" data-type="past-paper" data-year="2022">
+                            <div class="card-header">
+                                <div class="exam-badge">
+                                    <i class="fas fa-school"></i> High School
+                                </div>
+                                <h3>2022 High School Biology Exam</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>High school level exam with focus on core concepts</p>
+                                <div class="exam-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>40 Questions</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>75 minutes</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Difficulty: Normal</span>
+                                    </div>
+                                </div>
+                                <div class="resource-tags">
+                                    <span class="tag">High School</span>
+                                    <span class="tag">2022</span>
+                                    <span class="tag">Core Concepts</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary start-exam-btn" data-exam="2022-highschool">
+                                    <i class="fas fa-play"></i> Start Exam
+                                </button>
+                                <button class="btn btn-secondary btn-sm preview-exam-btn">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card exam-card" data-difficulty="difficult" data-type="past-paper" data-year="2023">
+                            <div class="card-header">
+                                <div class="exam-badge competition-badge">
+                                    <i class="fas fa-trophy"></i> Competition
+                                </div>
+                                <h3>2023 Biology Competition Paper</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Advanced competition level questions for challenging practice</p>
+                                <div class="exam-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>30 Questions</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>120 minutes</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Difficulty: Difficult</span>
+                                    </div>
+                                </div>
+                                <div class="resource-tags">
+                                    <span class="tag">Competition</span>
+                                    <span class="tag">2023</span>
+                                    <span class="tag">Advanced</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary start-exam-btn" data-exam="2023-competition">
+                                    <i class="fas fa-play"></i> Start Exam
+                                </button>
+                                <button class="btn btn-secondary btn-sm preview-exam-btn">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card exam-card" data-difficulty="mixed" data-type="past-paper" data-year="2023">
+                            <div class="card-header">
+                                <div class="exam-badge">
+                                    <i class="fas fa-university"></i> College Entrance
+                                </div>
+                                <h3>2023 College Entrance Biology Exam</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Complete past exam paper with 50 questions covering all units</p>
+                                <div class="exam-info">
+                                    <div class="info-item">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>50 Questions</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>90 minutes</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <span>Difficulty: Mixed</span>
+                                    </div>
+                                </div>
+                                <div class="resource-tags">
+                                    <span class="tag">College</span>
+                                    <span class="tag">2023</span>
+                                    <span class="tag">Complete Paper</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary start-exam-btn" data-exam="2023-college">
+                                    <i class="fas fa-play"></i> Start Exam
+                                </button>
+                                <button class="btn btn-secondary btn-sm preview-exam-btn">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- 2. General Questions -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="general-questions-section">
+                        <h2><i class="fas fa-question-circle"></i> General Questions</h2>
+                        <span>Mixed difficulty questions from all units</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="question-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-database"></i>
+                                    <div>
+                                        <h4>500+</h4>
+                                        <p>Total Questions</p>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-brain"></i>
+                                    <div>
+                                        <h4>Adaptive</h4>
+                                        <p>Difficulty System</p>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-history"></i>
+                                    <div>
+                                        <h4>Progress</h4>
+                                        <p>Tracking</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="adaptive-info">
+                                <h4><i class="fas fa-robot"></i> Adaptive Difficulty System</h4>
+                                <p>The system automatically adjusts question difficulty based on your performance. Start
+                                    with medium difficulty, and the system will adapt to your level.</p>
+
+                                <div class="level-display">
+                                    <div class="level-indicator">
+                                        <span>Your current level:</span>
+                                        <div class="level-bar">
+                                            <div class="level-fill" style="width: 60%"></div>
+                                        </div>
+                                        <span class="level-text">Intermediate</span>
+                                    </div>
+
+                                    <div class="next-question">
+                                        <span>Next question difficulty:</span>
+                                        <span class="difficulty-tag normal">Medium</span>
+                                    </div>
+                                </div>
+
+                                <div class="question-filters">
+                                    <span>Filter by Unit:</span>
+                                    <div class="filter-tags">
+                                        <span class="tag active" data-unit="all">All Units</span>
+                                        <span class="tag" data-unit="1">Unit 1</span>
+                                        <span class="tag" data-unit="2">Unit 2</span>
+                                        <span class="tag" data-unit="3">Unit 3</span>
+                                        <span class="tag" data-unit="4">Unit 4</span>
+                                    </div>
+                                </div>
+
+                                <div style="text-align: center; margin-top: 1.5rem;">
+                                    <button class="btn btn-primary" id="startAdaptiveBtn">
+                                        <i class="fas fa-play-circle"></i> Start Adaptive Training
+                                    </button>
+                                    <button class="btn btn-secondary" id="viewAllGeneralBtn">
+                                        <i class="fas fa-list"></i> View All Questions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Concept Questions -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="concept-questions-section">
+                        <h2><i class="fas fa-lightbulb"></i> Concept Questions</h2>
+                        <span>Questions focused on specific concepts</span>
+                    </div>
+
+                    <div class="card-container">
+                        <div class="card concept-card" data-concept="water-properties">
+                            <div class="card-header">
+                                <div class="concept-badge">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <h3>Water Properties</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Questions testing understanding of polarity, cohesion, adhesion, and solvent
+                                    properties</p>
+                                <div class="question-count">
+                                    <i class="fas fa-question"></i>
+                                    <span>25 questions available</span>
+                                </div>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 1</span>
+                                    <span class="tag">Chemistry of Life</span>
+                                    <span class="tag">Molecular Biology</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary btn-sm start-concept-btn">
+                                    <i class="fas fa-play"></i> Start Practice
+                                </button>
+                                <button class="btn btn-secondary btn-sm view-concept-btn">
+                                    <i class="fas fa-book-open"></i> Review Concept
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card concept-card" data-concept="cell-membrane">
+                            <div class="card-header">
+                                <div class="concept-badge">
+                                    <i class="fas fa-border-style"></i>
+                                </div>
+                                <h3>Cell Membrane & Transport</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Diffusion, osmosis, active transport, and membrane structure questions</p>
+                                <div class="question-count">
+                                    <i class="fas fa-question"></i>
+                                    <span>30 questions available</span>
+                                </div>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 2</span>
+                                    <span class="tag">Cell Structure</span>
+                                    <span class="tag">Transport</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary btn-sm start-concept-btn">
+                                    <i class="fas fa-play"></i> Start Practice
+                                </button>
+                                <button class="btn btn-secondary btn-sm view-concept-btn">
+                                    <i class="fas fa-book-open"></i> Review Concept
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card concept-card" data-concept="dna-replication">
+                            <div class="card-header">
+                                <div class="concept-badge">
+                                    <i class="fas fa-dna"></i>
+                                </div>
+                                <h3>DNA Replication</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Replication fork, enzymes, leading/lagging strand questions</p>
+                                <div class="question-count">
+                                    <i class="fas fa-question"></i>
+                                    <span>20 questions available</span>
+                                </div>
+                                <div class="resource-tags">
+                                    <span class="tag">Unit 4</span>
+                                    <span class="tag">Genetics</span>
+                                    <span class="tag">Molecular Biology</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary btn-sm start-concept-btn">
+                                    <i class="fas fa-play"></i> Start Practice
+                                </button>
+                                <button class="btn btn-secondary btn-sm view-concept-btn">
+                                    <i class="fas fa-book-open"></i> Review Concept
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Unit Questions -->
+                    <div class="section-title" style="margin-top: 2.5rem;" id="unit-questions-section">
+                        <h2><i class="fas fa-book"></i> Unit Questions</h2>
+                        <span>Specialized exercises organized by textbook units</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="unit-selector">
+                                <h4><i class="fas fa-layer-group"></i> Select Unit</h4>
+                                <div class="unit-grid">
+                                    <div class="unit-option active" data-unit="1">
+                                        <div class="unit-icon">
+                                            <i class="fas fa-tint"></i>
+                                        </div>
+                                        <div class="unit-info">
+                                            <h5>Unit 1</h5>
+                                            <p>Chemical Basis of Life</p>
+                                            <span class="question-count">45 questions</span>
+                                        </div>
+                                    </div>
+                                    <div class="unit-option" data-unit="2">
+                                        <div class="unit-icon">
+                                            <i class="fas fa-border-style"></i>
+                                        </div>
+                                        <div class="unit-info">
+                                            <h5>Unit 2</h5>
+                                            <p>Cell Structure</p>
+                                            <span class="question-count">60 questions</span>
+                                        </div>
+                                    </div>
+                                    <div class="unit-option" data-unit="3">
+                                        <div class="unit-icon">
+                                            <i class="fas fa-bolt"></i>
+                                        </div>
+                                        <div class="unit-info">
+                                            <h5>Unit 3</h5>
+                                            <p>Cell Metabolism</p>
+                                            <span class="question-count">55 questions</span>
+                                        </div>
+                                    </div>
+                                    <div class="unit-option" data-unit="4">
+                                        <div class="unit-icon">
+                                            <i class="fas fa-dna"></i>
+                                        </div>
+                                        <div class="unit-info">
+                                            <h5>Unit 4</h5>
+                                            <p>Genetics</p>
+                                            <span class="question-count">70 questions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="difficulty-selector">
+                                <h4><i class="fas fa-sliders-h"></i> Select Difficulty for Unit Questions</h4>
+                                <div class="difficulty-levels">
+                                    <div class="difficulty-level active" data-level="easy">
+                                        <div class="level-icon">
+                                            <i class="fas fa-seedling"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Easy</h5>
+                                            <p>Basic recall and understanding</p>
+                                        </div>
+                                    </div>
+                                    <div class="difficulty-level" data-level="normal">
+                                        <div class="level-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Normal</h5>
+                                            <p>Application and analysis</p>
+                                        </div>
+                                    </div>
+                                    <div class="difficulty-level" data-level="difficult">
+                                        <div class="level-icon">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Difficult</h5>
+                                            <p>Evaluation and synthesis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 2rem;">
+                                <button class="btn btn-primary" id="startUnitPracticeBtn">
+                                    <i class="fas fa-play"></i> Start Unit Practice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 功能特性说明 -->
+                    <!--<div class="section-title" style="margin-top: 2.5rem;">
+                        <h2>Question Features</h2>
+                        <span>Each question includes the following features</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="features-grid">
+                                <div>
+                                    <h4><i class="fas fa-analysis"></i> Detailed Analysis</h4>
+                                    <p>Each question has detailed solution steps and knowledge point analysis</p>
+                                </div>
+                                <div>
+                                    <h4><i class="fas fa-link"></i> Related Concepts</h4>
+                                    <p>Direct jump to learning pages for concepts related to the question</p>
+                                </div>
+                                <div>
+                                    <h4><i class="fas fa-tag"></i> Save & Tag</h4>
+                                    <p>Save questions and add custom tags for convenient review</p>
+                                </div>
+                            </div>
+                        -->
+                            <!-- 示例题目 -->
+                            <div class="sample-question" style="margin-top: 2rem;">
+                                <h4><i class="fas fa-graduation-cap"></i> Sample Question Preview</h4>
+                                <div class="question-preview">
+                                    <p><strong>Question:</strong> Which of the following properties of water is
+                                        responsible for its high surface tension?</p>
+                                    <div class="options">
+                                        <div class="option">
+                                            <input type="radio" id="option1" name="sample-question" value="A">
+                                            <label for="option1">A) High specific heat capacity</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="option2" name="sample-question" value="B">
+                                            <label for="option2">B) Adhesion</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="option3" name="sample-question" value="C">
+                                            <label for="option3">C) Cohesion (Correct Answer)</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="option4" name="sample-question" value="D">
+                                            <label for="option4">D) Universal solvent property</label>
+                                        </div>
+                                    </div>
+                                    <div class="question-actions">
+                                        <button class="btn btn-secondary btn-sm" id="showExplanationBtn">
+                                            <i class="fas fa-lightbulb"></i> Show Explanation
+                                        </button>
+                                        <button class="btn btn-secondary btn-sm" id="goToConceptBtn">
+                                            <i class="fas fa-external-link-alt"></i> Go to Concept
+                                        </button>
+                                        <button class="btn btn-secondary btn-sm" id="addTagBtn">
+                                            <i class="fas fa-tag"></i> Add Tag
+                                        </button>
+                                        <button class="btn btn-secondary btn-sm" id="saveQuestionBtn">
+                                            <i class="fas fa-bookmark"></i> Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 考试设置弹窗 -->
+            <div class="modal" id="examSettingsModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-cog"></i> Exam Settings</h3>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="setting-group">
+                            <h4><i class="fas fa-clock"></i> Time Limit</h4>
+                            <div class="timer-selection">
+                                <div class="timer-option" data-minutes="30">
+                                    <i class="fas fa-stopwatch"></i>
+                                    <span>30 minutes</span>
+                                </div>
+                                <div class="timer-option active" data-minutes="60">
+                                    <i class="fas fa-clock"></i>
+                                    <span>60 minutes</span>
+                                </div>
+                                <div class="timer-option" data-minutes="90">
+                                    <i class="fas fa-hourglass-end"></i>
+                                    <span>90 minutes</span>
+                                </div>
+                                <div class="timer-option" data-minutes="120">
+                                    <i class="fas fa-hourglass-half"></i>
+                                    <span>120 minutes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="setting-group">
+                            <h4><i class="fas fa-sliders-h"></i> Difficulty Level</h4>
+                            <div class="difficulty-selection">
+                                <div class="difficulty-option" data-difficulty="easy">
+                                    <div class="difficulty-label easy">Easy</div>
+                                    <p>Basic questions, good for review</p>
+                                </div>
+                                <div class="difficulty-option active" data-difficulty="normal">
+                                    <div class="difficulty-label normal">Normal</div>
+                                    <p>Standard exam difficulty</p>
+                                </div>
+                                <div class="difficulty-option" data-difficulty="difficult">
+                                    <div class="difficulty-label difficult">Difficult</div>
+                                    <p>Challenging questions</p>
+                                </div>
+                                <div class="difficulty-option" data-difficulty="mixed">
+                                    <div class="difficulty-label mixed">Mixed</div>
+                                    <p>Varied difficulty levels</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="setting-group">
+                            <h4><i class="fas fa-question-circle"></i> Question Count</h4>
+                            <div class="question-count-selection">
+                                <input type="range" id="questionCountSlider" min="10" max="50" value="25" step="5">
+                                <div class="slider-value">
+                                    <span id="questionCountValue">25</span> questions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" id="cancelExamBtn">Cancel</button>
+                        <button class="btn btn-primary" id="startExamBtn">Start Exam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 考试进行中弹窗 -->
+            <div class="modal" id="examInProgressModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-hourglass-half"></i> Exam in Progress</h3>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="exam-timer">
+                            <div class="timer-display">
+                                <span id="minutes">60</span>:<span id="seconds">00</span>
+                            </div>
+                            <div class="timer-label">Time Remaining</div>
+                        </div>
+
+                        <div class="exam-progress">
+                            <div class="progress-info">
+                                <span>Question <span id="currentQuestion">1</span> of <span
+                                        id="totalQuestions">25</span></span>
+                                <span id="progressPercentage">4%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 4%"></div>
+                            </div>
+                        </div>
+
+                        <div class="question-display">
+                            <p id="examQuestionText">Which of the following properties of water is responsible for its
+                                high
+                                surface tension?</p>
+                            <div class="exam-options">
+                                <div class="exam-option" data-option="A">
+                                    <input type="radio" name="exam-question" id="examOptionA" value="A">
+                                    <label for="examOptionA">A) High specific heat capacity</label>
+                                </div>
+                                <div class="exam-option" data-option="B">
+                                    <input type="radio" name="exam-question" id="examOptionB" value="B">
+                                    <label for="examOptionB">B) Adhesion</label>
+                                </div>
+                                <div class="exam-option" data-option="C">
+                                    <input type="radio" name="exam-question" id="examOptionC" value="C">
+                                    <label for="examOptionC">C) Cohesion</label>
+                                </div>
+                                <div class="exam-option" data-option="D">
+                                    <input type="radio" name="exam-question" id="examOptionD" value="D">
+                                    <label for="examOptionD">D) Universal solvent property</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" id="previousQuestionBtn" disabled>
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button class="btn btn-secondary" id="flagQuestionBtn">
+                            <i class="far fa-flag"></i> Flag
+                        </button>
+                        <button class="btn btn-primary" id="nextQuestionBtn">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 讨论区页面 -->
+        <section id="forum" class="page-content">
+            <div class="study-layout">
+                <!-- 左侧Forum目录树 -->
+                <div class="chapter-tree">
+                    <div class="section-title">
+                        <h3><i class="fas fa-sitemap"></i> Forum Directory</h3>
+                    </div>
+
+                    <!-- 简化后的目录 - 按单元组织 -->
+                    <div class="tree-unit active" data-target="#hot-discussions">
+                        <div class="unit-header">
+                            <i class="fas fa-fire"></i>
+                            <span class="unit-title">Hot Discussions</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#unit1-discussions">
+                        <div class="unit-header">
+                            <i class="fas fa-book"></i>
+                            <span class="unit-title">Unit 1: Chemical Basis of Life</span>
+                        </div>
+                        <div class="unit-content" style="display: none;">
+                            <div class="tree-concept" data-concept="water-properties">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Water Properties</span>
+                            </div>
+                            <div class="tree-concept" data-concept="ph-scale">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">pH Scale</span>
+                            </div>
+                            <div class="tree-concept" data-concept="macromolecules">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Macromolecules</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#unit2-discussions">
+                        <div class="unit-header">
+                            <i class="fas fa-book"></i>
+                            <span class="unit-title">Unit 2: Cell Structure</span>
+                        </div>
+                        <div class="unit-content" style="display: none;">
+                            <div class="tree-concept" data-concept="cell-membrane">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Cell Membrane</span>
+                            </div>
+                            <div class="tree-concept" data-concept="organelles">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Organelles</span>
+                            </div>
+                            <div class="tree-concept" data-concept="cell-division">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Cell Division</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#unit3-discussions">
+                        <div class="unit-header">
+                            <i class="fas fa-book"></i>
+                            <span class="unit-title">Unit 3: Cell Metabolism</span>
+                        </div>
+                        <div class="unit-content" style="display: none;">
+                            <div class="tree-concept" data-concept="enzymes">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Enzymes</span>
+                            </div>
+                            <div class="tree-concept" data-concept="respiration">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Cellular Respiration</span>
+                            </div>
+                            <div class="tree-concept" data-concept="photosynthesis">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Photosynthesis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#unit4-discussions">
+                        <div class="unit-header">
+                            <i class="fas fa-book"></i>
+                            <span class="unit-title">Unit 4: Genetics</span>
+                        </div>
+                        <div class="unit-content" style="display: none;">
+                            <div class="tree-concept" data-concept="dna-replication">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">DNA Replication</span>
+                            </div>
+                            <div class="tree-concept" data-concept="protein-synthesis">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Protein Synthesis</span>
+                            </div>
+                            <div class="tree-concept" data-concept="mendelian-genetics">
+                                <i class="fas fa-circle"></i>
+                                <span class="concept-title">Mendelian Genetics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#my-posts">
+                        <div class="unit-header">
+                            <i class="fas fa-user"></i>
+                            <span class="unit-title">My Posts</span>
+                        </div>
+                    </div>
+
+                    <div class="tree-unit" data-target="#followed-posts">
+                        <div class="unit-header">
+                            <i class="fas fa-heart"></i>
+                            <span class="unit-title">Followed Posts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧内容区 -->
+                <div class="concept-content">
+                    <div class="page-header">
+                        <h1>Discussion Forum</h1>
+                        <p>Discuss biology questions with fellow students, help each other, progress together</p>
+                        <div style="margin-top: 1rem;">
+                            <button class="btn btn-primary" id="createPostBtn_forum">
+                                <i class="fas fa-plus"></i> Create Post (Ask for Help)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 热门讨论（默认显示） -->
+                    <div id="hot-discussions" class="discussion-section active">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-row">
+                                    <h3><i class="fas fa-fire"></i> Hot Discussions</h3>
+                                    <span class="badge"
+                                        style="background-color: var(--primary-color); color: white;">Most Active</span>
+                                </div>
+                            </div>
+                            <div class="card-body" id="hotDiscussionList">
+                                <!-- 热门帖子会动态加载到这里 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 各单元讨论区（初始隐藏） -->
+                    <div id="unit1-discussions" class="discussion-section" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-book"></i> Unit 1: Chemical Basis of Life Discussions</h3>
+                            </div>
+                            <div class="card-body" id="unit1DiscussionList">
+                                <!-- Unit 1帖子会动态加载到这里 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="unit2-discussions" class="discussion-section" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-book"></i> Unit 2: Cell Structure Discussions</h3>
+                            </div>
+                            <div class="card-body" id="unit2DiscussionList">
+                                <!-- Unit 2帖子会动态加载到这里 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="unit3-discussions" class="discussion-section" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-book"></i> Unit 3: Cell Metabolism Discussions</h3>
+                            </div>
+                            <div class="card-body" id="unit3DiscussionList">
+                                <!-- Unit 3帖子会动态加载到这里 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="unit4-discussions" class="discussion-section" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-book"></i> Unit 4: Genetics Discussions</h3>
+                            </div>
+                            <div class="card-body" id="unit4DiscussionList">
+                                <!-- Unit 4帖子会动态加载到这里 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 我的帖子 -->
+                    <div id="my-posts" class="discussion-section" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-user"></i> My Posts</h3>
+                            </div>
+                            <div class="card-body" id="myPostsList">
+                                <!-- 我的帖子会动态加载到这里 -->
+                                <div class="empty-state" id="emptyMyPosts">
+                                    <p style="text-align: center; color: #666; padding: 2rem;">
+                                        You haven't created any posts yet. <a href="#" class="create-post-link">Create
+                                            your first post</a>!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 关注的帖子 -->
+                    <div id="followed-posts" class="discussion-section" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-heart"></i> Followed Posts</h3>
+                            </div>
+                            <div class="card-body" id="followedPostsList">
+                                <!-- 关注的帖子会动态加载到这里 -->
+                                <div class="empty-state" id="emptyFollowedPosts">
+                                    <p style="text-align: center; color: #666; padding: 2rem;">
+                                        You're not following any posts yet. Click "Follow" on interesting discussions to
+                                        see them here.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 个人中心页面 -->
+        <section id="mybio" class="page-content">
+            <div class="page-header">
+                <div class="container">
+                    <!-- 用户基本信息 -->
+                    <div class="user-profile-header">
+                        <div class="user-avatar-section">
+                            <div class="avatar-wrapper">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User Avatar">
+                                <span class="online-status"></span>
+                            </div>
+                            <div class="user-info">
+                                <h1>Emma Chen</h1>
+                                <p>@emma_biology • AP Biology Student</p>
+                                <div class="user-stats">
+                                    <span><strong>156</strong> Following</span>
+                                    <span><strong>2.3k</strong> Followers</span>
+                                    <span><strong>342</strong> Posts</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 用户标签 -->
+                        <div class="user-tags">
+                            <span class="tag">🎓 AP Biology</span>
+                            <span class="tag">🔬 Science Lover</span>
+                            <span class="tag">📚 Study Notes</span>
+                            <span class="tag">🏆 Top Contributor</span>
+                        </div>
+
+                        <!-- 操作按钮 -->
+                        <div class="user-actions">
+                            <button class="btn btn-primary" id="followUserBtn">
+                                <i class="fas fa-plus"></i> Follow
+                            </button>
+                            <button class="btn btn-secondary" id="messageUserBtn">
+                                <i class="fas fa-envelope"></i> Message
+                            </button>
+                            <button class="btn btn-primary" id="enterClassroomBtn">
+                                <i class="fas fa-door-open"></i> Enter Classroom
+                            </button>
+                            <button class="btn btn-secondary" id="moreOptionsBtn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- 搜索用户功能 -->
+                <div class="search-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-search"></i> Search Users</h3>
+                        <button class="btn btn-primary" id="addFriendBtn">
+                            <i class="fas fa-user-plus"></i> Add Friend
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="search-container">
+                            <input type="text" id="searchUsers" placeholder="Search by username, interests, or tags...">
+                            <button class="btn btn-primary" id="searchUsersBtn">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+
+                        <!-- 好友推荐 -->
+                        <div class="friend-suggestions">
+                            <h4>Suggested Friends</h4>
+                            <div class="suggestions-grid">
+                                <!-- 推荐用户卡片 -->
+                                <div class="suggestion-card">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                                    <h5>Alex Johnson</h5>
+                                    <p>Biology Major</p>
+                                    <button class="btn btn-primary">Follow</button>
+                                </div>
+
+                                <div class="suggestion-card">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                                    <h5>Sophia Williams</h5>
+                                    <p>AP Bio Tutor</p>
+                                    <button class="btn btn-primary">Follow</button>
+                                </div>
+
+                                <div class="suggestion-card">
+                                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User">
+                                    <h5>Michael Chen</h5>
+                                    <p>Science Educator</p>
+                                    <button class="btn btn-primary">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 内容选项卡 -->
+                <div class="content-tabs">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="posts">Posts</button>
+                        <button class="tab-btn" data-tab="learning">Learning</button>
+                        <button class="tab-btn" data-tab="saved">Saved</button>
+                        <button class="tab-btn" data-tab="following">Following</button>
+                        <button class="tab-btn" data-tab="analytics">Analytics</button>
+                    </div>
+                </div>
+
+                <!-- 帖子网格 - 类似小红书 -->
+                <div class="posts-grid active" id="postsTab">
+                    <div class="grid-header">
+                        <h3>My Study Notes & Posts</h3>
+                        <button class="btn btn-primary" id="createPostBtn_bio">
+                            <i class="fas fa-plus"></i> Create Post
+                        </button>
+                    </div>
+
+                    <div class="posts-container">
+                        <!-- 帖子卡片 1 -->
+                        <div class="post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="Biology Notes">
+                                <div class="post-type study-notes">Study Notes</div>
+                            </div>
+                            <div class="post-content">
+                                <h4>DNA Replication Simplified</h4>
+                                <p>Step-by-step guide to understanding DNA replication with easy diagrams...</p>
+                                <div class="post-tags">
+                                    <span class="tag">Unit 4</span>
+                                    <span class="tag">Genetics</span>
+                                    <span class="tag">DNA</span>
+                                </div>
+                                <div class="post-stats">
+                                    <span><i class="fas fa-heart"></i> 142</span>
+                                    <span><i class="fas fa-comment"></i> 23</span>
+                                    <span><i class="fas fa-share"></i> 8</span>
+                                    <span><i class="fas fa-bookmark"></i> 45</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 帖子卡片 2 -->
+                        <div class="post-card">
+                            <div class="post-image">
+                                <img src="https://t4.ftcdn.net/jpg/01/45/53/11/360_F_145531127_BJGPesAP7B0eYjnCrYmefHDQR6ziH11J.jpg"
+                                    alt="Cell Diagram">
+                                <div class="post-type diagram">Diagram</div>
+                            </div>
+                            <div class="post-content">
+                                <h4>Mitochondria Structure Explained</h4>
+                                <p>Detailed labeled diagram of mitochondria with functions of each part...</p>
+                                <div class="post-tags">
+                                    <span class="tag">Unit 2</span>
+                                    <span class="tag">Cell Biology</span>
+                                    <span class="tag">Organelles</span>
+                                </div>
+                                <div class="post-stats">
+                                    <span><i class="fas fa-heart"></i> 89</span>
+                                    <span><i class="fas fa-comment"></i> 12</span>
+                                    <span><i class="fas fa-share"></i> 5</span>
+                                    <span><i class="fas fa-bookmark"></i> 32</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 帖子卡片 3 -->
+                        <div class="post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="Experiment">
+                                <div class="post-type experiment">Experiment</div>
+                            </div>
+                            <div class="post-content">
+                                <h4>Photosynthesis Lab Results</h4>
+                                <p>My experiment results and analysis on factors affecting photosynthesis rate...</p>
+                                <div class="post-tags">
+                                    <span class="tag">Unit 3</span>
+                                    <span class="tag">Photosynthesis</span>
+                                    <span class="tag">Lab Report</span>
+                                </div>
+                                <div class="post-stats">
+                                    <span><i class="fas fa-heart"></i> 156</span>
+                                    <span><i class="fas fa-comment"></i> 34</span>
+                                    <span><i class="fas fa-share"></i> 12</span>
+                                    <span><i class="fas fa-bookmark"></i> 67</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学习记录选项卡 -->
+                <div class="learning-tab" id="learningTab">
+                    <div class="grid-header">
+                        <h3><i class="fas fa-chart-line"></i> Learning Analytics</h3>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div>42</div>
+                            <div>Concepts Learned</div>
+                            <div>Out of 156</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div>36</div>
+                            <div>Learning Hours</div>
+                            <div>This Month</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div>87%</div>
+                            <div>Avg. Quiz Score</div>
+                            <div>Last 10 quizzes</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div>24</div>
+                            <div>Mistakes Collected</div>
+                            <div>For review</div>
+                        </div>
+                    </div>
+
+                    <!-- 学习习惯 -->
+                    <div class="learning-habits">
+                        <h4><i class="fas fa-calendar-alt"></i> Study Habits</h4>
+                        <div class="habit-container">
+                            <div class="habit-summary">
+                                <span>Most Active Day: <strong>Monday</strong></span>
+                                <span>Best Time: <strong>7-9 PM</strong></span>
+                                <span>Streak: <strong>14 days</strong></span>
+                            </div>
+                            <div class="habit-chart">
+                                <div class="habit-bar" style="opacity: 1;"></div>
+                                <div class="habit-bar" style="opacity: 0.8;"></div>
+                                <div class="habit-bar" style="opacity: 0.6;"></div>
+                                <div class="habit-bar" style="opacity: 0.9;"></div>
+                                <div class="habit-bar" style="opacity: 1;"></div>
+                                <div class="habit-bar" style="opacity: 0.7;"></div>
+                                <div class="habit-bar" style="opacity: 0.5;"></div>
+                            </div>
+                            <div>Weekly study time distribution</div>
+                        </div>
+                    </div>
+
+                    <!-- 学习进度 -->
+                    <div class="learning-progress">
+                        <h4><i class="fas fa-tasks"></i> Progress Overview</h4>
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>AP Biology Complete</span>
+                                <span>27%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 27%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Practice Questions</span>
+                                <span>68%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill secondary" style="width: 68%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 标签编辑部分 -->
+                <div class="tags-section">
+                    <div class="section-title">
+                        <h2><i class="fas fa-tags"></i> Tag Management</h2>
+                        <span>Customize your learning tags</span>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="userTags" class="tag-container">
+                                <span class="tag">
+                                    Important Exam Point
+                                    <button class="tag-remove">×</button>
+                                </span>
+                                <span class="tag">
+                                    Easy to Confuse
+                                    <button class="tag-remove">×</button>
+                                </span>
+                                <span class="tag">
+                                    Need to Memorize
+                                    <button class="tag-remove">×</button>
+                                </span>
+                                <span class="tag">
+                                    Experiment Related
+                                    <button class="tag-remove">×</button>
+                                </span>
+                            </div>
+
+                            <div class="create-tag-section">
+                                <h4>Create New Tag</h4>
+                                <div>
+                                    <input type="text" id="newTagName" placeholder="Tag name">
+                                    <select id="newTagColor">
+                                        <option value="primary">Blue (Default)</option>
+                                        <option value="success">Green</option>
+                                        <option value="warning">Yellow</option>
+                                        <option value="danger">Red</option>
+                                    </select>
+                                    <button class="btn btn-primary" id="addNewTagBtn">
+                                        <i class="fas fa-plus"></i> Add Tag
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 私信模态框 -->
+            <div id="messageModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-envelope"></i> Send Message</h3>
+                        <button class="modal-close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <label>To:</label>
+                        <input type="text" id="messageRecipient" value="Emma Chen" readonly>
+
+                        <label>Message:</label>
+                        <textarea id="messageContent" rows="5" placeholder="Type your message here..."></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="sendMessageBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BioVision Platform</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Learning Resources</h3>
+                <ul>
+                    <li><a href="#">All Courses</a></li>
+                    <li><a href="#">Animation Library</a></li>
+                    <li><a href="#">3D Models</a></li>
+                    <li><a href="#">Practice Questions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Discussion Forum</a></li>
+                    <li><a href="#">Student Blogs</a></li>
+                    <li><a href="#">Study Groups</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 BioVision Educational Platform. All rights reserved. | Designed for biology education</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

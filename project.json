@@ -1,0 +1,17 @@
+{
+  "project": "BIOVISION EDU",
+  "edition": "Cellular Energetics — local static edition",
+  "unit": "Unit 2 · The Cell",
+  "chapters": [
+    9,
+    10
+  ],
+  "concepts": 16,
+  "questions": 48,
+  "models": 4,
+  "new_animations": 0,
+  "external_runtime_requests": 0,
+  "entry": "index.html",
+  "validation_date": "2026-10-06",
+  "checks_passed": 118
+}
